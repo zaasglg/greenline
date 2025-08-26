@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Calendar, MapPin, Phone, Mail, User, CheckCircle, ArrowRight, ArrowLeft, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function BookingPage() {
+function BookingComponent() {
   const searchParams = useSearchParams();
   const [currentStep, setCurrentStep] = useState(1);
   const [hasDiscount, setHasDiscount] = useState(false);
@@ -515,5 +515,13 @@ export default function BookingPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function BookingPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+      <BookingComponent />
+    </Suspense>
   );
 }
