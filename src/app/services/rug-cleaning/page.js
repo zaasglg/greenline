@@ -117,7 +117,7 @@ export default function RugCleaningPage() {
               </div>
               <h3 className="text-lg font-medium text-slate-900 mb-2">Affordable Pricing</h3>
               <p className="text-slate-600 text-sm">
-                We offer high-quality cleaning at prices that won't break the bank.
+                We offer high-quality cleaning at prices that won&apos;t break the bank.
               </p>
             </div>
           </div>
