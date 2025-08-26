@@ -45,7 +45,7 @@ export default function Home() {
             </div>
 
             {/* Right Promotional Boxes - Mobile: Below content, Desktop: Right side */}
-            <div className="relative md:absolute md:top-0 md:right-0 bg-white md:bg-[linear-gradient(0.753turn,rgba(255,255,255,1)_45%,rgba(255,255,255,0.05)_95%,rgba(255,255,255,0.01)_100%)] w-full md:w-6/12 md:h-full flex flex-col md:items-end md:justify-center space-y-3 md:space-y-4 p-4 md:px-6 md:backdrop-blur-xs transition-all duration-700">
+            <div className="promotional_boxes">
               {/* Free Service Call */}
               <div className="p-4 md:p-6 rounded-lg border-3 md:border-4 border-dashed border-red-500 w-full md:max-w-xs">
                 <div className="text-center md:text-left">
