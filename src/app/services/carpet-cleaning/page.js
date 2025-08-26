@@ -13,8 +13,8 @@ export default function CarpetCleaningPage() {
           </h1>
           <div className="w-24 h-1 bg-emerald-400 mx-auto mb-6"></div>
           <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed mb-8">
-            Tired of looking at a dull carpet with spots that just won't come out?
-            Dirt works its way deep into the fibers, clinging tight. In those high‑traffic areas, oils and grime build up, leaving your carpet looking worn and tired. And it's not just about looks — that buildup can hold on to bacteria and allergens that affect your family's health.
+            Tired of looking at a dull carpet with spots that just won&apos;t come out?
+            Dirt works its way deep into the fibers, clinging tight. In those high‑traffic areas, oils and grime build up, leaving your carpet looking worn and tired. And it&apos;s not just about looks — that buildup can hold on to bacteria and allergens that affect your family&apos;s health.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg font-medium shadow-lg">
@@ -33,14 +33,14 @@ export default function CarpetCleaningPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Here's how we fix it
+                Here&apos;s how we fix it
               </h2>
               <div className="w-16 h-1 bg-emerald-600 mb-6"></div>
               <p className="text-lg text-gray-600 leading-relaxed mb-6">
                 We start with a powerful prespray on the toughest areas to loosen up the dirt and oils. Then we hit it with our oxygenated booster and EPA Safer Choice encapsulator.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                The booster breaks the bond between dirt and fibers, and the encapsulator traps it all in tiny crystals so it can't settle back in.
+                The booster breaks the bond between dirt and fibers, and the encapsulator traps it all in tiny crystals so it can&apos;t settle back in.
               </p>
 
               <div className="space-y-4">
@@ -99,7 +99,7 @@ export default function CarpetCleaningPage() {
                 Our process uses very little moisture, so your carpets dry in just a few hours — not days.
               </p>
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                And we don't just do a quick pass — we go over every area twice to make sure every fiber gets the attention it needs.
+                And we don&apos;t just do a quick pass — we go over every area twice to make sure every fiber gets the attention it needs.
               </p>
 
               <div className="space-y-4">
@@ -137,12 +137,12 @@ export default function CarpetCleaningPage() {
             <div className="bg-white p-6 border-slate-400 text-center">
               <h3 className="text-lg font-medium text-slate-900 mb-2">Your carpet traps dirt, dust, and allergens year after year</h3>
               <p className="text-slate-600 text-sm">
-                Every day, more contaminants build up deep in the fibers where regular vacuuming can't reach.
+                Every day, more contaminants build up deep in the fibers where regular vacuuming can&apos;t reach.
               </p>
             </div>
 
             <div className="bg-white p-6 border-l-2 border-slate-400 text-center">
-              <h3 className="text-lg font-medium text-slate-900 mb-2">DIY or regular cleaning can't get it all out</h3>
+              <h3 className="text-lg font-medium text-slate-900 mb-2">DIY or regular cleaning can&apos;t get it all out</h3>
               <p className="text-slate-600 text-sm">
                 Store-bought cleaners and rental machines lack the power to reach embedded dirt and oils.
               </p>
@@ -162,7 +162,7 @@ export default function CarpetCleaningPage() {
               📞 Call or message us today — your carpet could be fresh, clean, and safe for your family by tomorrow.
             </h3>
             <p className="text-xl text-emerald-600 font-semibold mb-6">
-              Let's bring your carpet back to life now.
+              Let&apos;s bring your carpet back to life now.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg font-medium shadow-lg">

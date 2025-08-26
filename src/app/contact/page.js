@@ -56,7 +56,7 @@ export default function ContactPage() {
               {isSubmitted && (
                 <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span className="text-green-800">Thank you! We'll get back to you within 24 hours.</span>
+                  <span className="text-green-800">Thank you! We&apos;ll get back to you within 24 hours.</span>
                 </div>
               )}
 
@@ -164,7 +164,7 @@ export default function ContactPage() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
                 <div className="w-16 h-1 bg-green-500 mb-8"></div>
                 <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                  Ready to experience the difference professional cleaning can make? Contact us today for a free estimate. We're here to answer all your questions and help you choose the best cleaning solution for your needs.
+                  Ready to experience the difference professional cleaning can make? Contact us today for a free estimate. We&apos;re here to answer all your questions and help you choose the best cleaning solution for your needs.
                 </p>
               </div>
 
