@@ -1,282 +1,185 @@
+"use client";
 import Link from "next/link";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Leaf, Target, Users, Award, Phone, ClipboardList, Sparkles, ShieldCheck, Heart, Star, Quote, ArrowRight } from "lucide-react";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import ReviewsCarousel from "@/components/ReviewsCarousel";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function Home() {
+  const plugin1 = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: false }));
+  const plugin2 = React.useRef(Autoplay({ delay: 2500, stopOnInteraction: false }));
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-green-50 to-white">
       {/* Hero Section */}
-      <section className="relative min-h-[500px] md:h-[600px] bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url('/images/furgon.jpg')"}}>
-        {/* Content */}
-        <div className="relative flex flex-col md:flex-row h-full z-10">
-          <div className="w-full h-full">
+      <section className="relative min-h-[400px] md:h-[450px] bg-gradient-to-r from-blue-500 via-blue-400 to-blue-300">
+        <div className="container mx-auto px-4 h-full">
+          <div className="grid lg:grid-cols-2 gap-8 items-center h-full">
             {/* Left Content */}
-            <div className="relative flex items-center h-full px-4 md:px-8 py-8 md:py-0">
-              <div className="absolute top-0 left-0 bottom-0 right-0 bg-black/50 md:bg-black/40"></div>
-              <div className="relative z-10 text-white w-full md:w-auto">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4 uppercase text-center md:text-left">
-                  GreenLine
-                </h1>
-                <p className="text-base md:text-lg text-green-200 font-semibold mb-4 text-center md:text-left">Eco-Friendly Cleaning for Your Health</p>
-                <div className="flex justify-center md:justify-start">
-                  <Button
-                    size="lg"
-                    className="bg-red-600 hover:bg-red-700 text-white font-bold px-6 md:px-8 py-3 md:py-4 text-base md:text-lg"
-                  >
-                    BOOK ONLINE
-                  </Button>
-                </div>
+            <div className="text-white space-y-6 relative z-10">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+                GreenLine, the Right <br /> Way to Clean
+              </h1>
+              <p className="text-base md:text-lg text-blue-100 leading-relaxed max-w-lg">
+                Refresh and renew your carpets the safe, professional way with GreenLine. We clean using our proprietary Zr™ Water—no soaps or harsh chemicals. Enjoy a deep, fast-drying clean that's safe for your family and pets, and trusted by over 400,000 customers each year.
+              </p>
+              
+              <Button 
+                size="lg" 
+                className="bg-emerald-400 hover:bg-emerald-500 text-white font-bold px-10 py-5 text-xl"
+              >
+                BOOK ONLINE
+              </Button>
+            </div>
 
-                {/* Address and Hours */}
-                <div className="mt-6 md:mt-8 text-gray-100 text-center md:text-left">
-                  <p className="mb-2 text-sm md:text-base">123 Environmental Way, Green City, GC 12345</p>
-                  <p className="text-base md:text-lg font-semibold">8AM - 8PM MON - SAT</p>
-                </div>
-                {/* Contact message added by assistant */}
-                <div className="mt-4 text-gray-100 text-xs md:text-sm max-w-md mx-auto md:mx-0 text-center md:text-left">
-                  <p>
-                    Please contact us directly through our website or call the number provided above for any assistance or questions you may have! We will be more than happy to help you! Thank you and have a great day!
-                  </p>
-                </div>
+            {/* Right Image */}
+            <div className="absolute right-0 top-0 bottom-0 w-1/2" style={{clipPath: 'circle(75% at 70% 51%'}}>
+              <img
+                src="/images/professional-cleaner.webp"
+                alt="Professional carpet cleaner at work"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-4">
+              Cleaning Surfaces That Matter Most
+            </h2>
+            <p className="text-slate-600 max-w-4xl mx-auto text-lg">
+              You deserve more than just clean carpets! Keep you and your family healthier by trusting us to expertly remove dirt and grime from living spaces and surfaces throughout your home with our non-toxic proprietary Zr™ Water, which is free of dirt-attracting soaps, detergents, and fragrances.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {/* Steam Carpet Cleaning */}
+            <div className="group cursor-pointer flex flex-col h-full">
+              <div className="aspect-[4/3] rounded-t-lg overflow-hidden mb-0">
+                <img
+                  src="https://img.freepik.com/premium-photo/cleaning-service-company-employee-removing-dirt-from-carpet-flat-with-professional-steam-cleaner-equipment-close-up_194143-6643.jpg"
+                  alt="Steam carpet cleaning"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="bg-blue-500 group-hover:bg-blue-700 text-white p-4 rounded-b-lg flex-1 flex items-center transition-colors duration-300">
+                <h3 className="text-lg font-medium flex items-center justify-between w-full">
+                  Steam Carpet Cleaning
+                  <ArrowRight className="w-5 h-5" />
+                </h3>
               </div>
             </div>
 
-            {/* Right Promotional Boxes - Mobile: Below content, Desktop: Right side */}
-            <div className="promotional_boxes">
-              {/* Free Service Call */}
-              <div className="p-4 md:p-6 rounded-lg border-3 md:border-4 border-dashed border-red-500 w-full md:max-w-xs">
-                <div className="text-center md:text-left">
-                  <h3 className="text-2xl md:text-3xl font-bold text-red-600 mb-1 md:mb-2">FREE</h3>
-                  <p className="text-base md:text-lg font-semibold text-gray-800 mb-1">CONSULTATION</p>
-                  <p className="text-xs md:text-sm text-gray-600">FOR ENVIRONMENTAL &</p>
-                  <p className="text-xs md:text-sm text-gray-600">SUSTAINABILITY SERVICES</p>
-                </div>
+            {/* Steam Cleaning Upholstery */}
+            <div className="group cursor-pointer flex flex-col h-full">
+              <div className="aspect-[4/3] rounded-t-lg overflow-hidden mb-0">
+                <img
+                  src="https://i.pinimg.com/736x/2e/bc/bc/2ebcbcb277e1147df0b6d779607bffef.jpg"
+                  alt="Steam cleaning upholstery"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
               </div>
-
-              {/* Discount */}
-              <div className="p-4 md:p-6 rounded-lg border-3 md:border-4 border-dashed border-red-500 w-full md:max-w-xs">
-                <div className="text-center md:text-left">
-                  <h3 className="text-2xl md:text-3xl font-bold text-red-600 mb-1 md:mb-2">15%</h3>
-                  <p className="text-base md:text-lg font-semibold text-gray-800 mb-1">DISCOUNT AVAILABLE</p>
-                  <p className="text-xs md:text-sm text-gray-600">15% OFF SERVICES FOR MILITARY,</p>
-                  <p className="text-xs md:text-sm text-gray-600">TEACHERS, POLICE AND FIRE SENIORS</p>
-                  <p className="text-xs md:text-sm text-gray-600">FOR SERVICES UP TO $1000</p>
-                </div>
+              <div className="bg-blue-500 group-hover:bg-blue-700 text-white p-4 rounded-b-lg flex-1 flex items-center transition-colors duration-300">
+                <h3 className="text-lg font-medium flex items-center justify-between w-full">
+                  Steam Cleaning Upholstery
+                  <ArrowRight className="w-5 h-5" />
+                </h3>
               </div>
+            </div>
 
-              {/* Starting Price */}
-              <div className="p-4 md:p-6 rounded-lg border-3 md:border-4 border-dashed border-red-500 w-full md:max-w-xs">
-                <div className="text-center md:text-left">
-                  <h3 className="text-3xl md:text-4xl font-bold text-red-600 mb-1 md:mb-2">$99</h3>
-                  <p className="text-base md:text-lg font-semibold text-gray-800">CONSULTATION</p>
-                </div>
+            {/* Steam Cleaning Mattress and Vehicle */}
+            <div className="group cursor-pointer flex flex-col h-full">
+              <div className="aspect-[4/3] rounded-t-lg overflow-hidden mb-0">
+                <img
+                  src="https://avatars.mds.yandex.net/i?id=8828bcf33128c71acbc0d101235f6fc0_l-9237918-images-thumbs&n=13"
+                  alt="Steam cleaning mattress and vehicle"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="bg-blue-500 group-hover:bg-blue-700 text-white p-4 rounded-b-lg flex-1 flex items-center transition-colors duration-300">
+                <h3 className="text-lg leading-5 font-medium flex items-center justify-between w-full">
+                  Steam Cleaning Mattress & Vehicle
+                  <ArrowRight className="w-5 h-5" />
+                </h3>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Trust Badges & Certifications */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="container mx-autoj">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              Trusted by Thousands of Customers
-            </h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">
-              Our certifications and customer satisfaction speak for themselves
-            </p>
-          </div>
+      {/* Experts in the Science of Clean */}
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Image */}
+            <div className="relative">
+              <img
+                src="/images/professional-cleaner.webp"
+                alt="Professional cleaner using advanced equipment"
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
 
-          {/* Auto-sliding logo carousel */}
-          <div className="relative overflow-hidden">
-            <div className="flex animate-[slide-infinite_60s_linear_infinite] space-x-8 items-center">
-              {/* First set of logos */}
-              <img
-                src="/images/logos/100-satisfaction-guaranteed-gold-label-with-red-ribbon-i-free-vector.jpg"
-                alt="100% Satisfaction Guaranteed"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/1000_F_302829249_sGra3Q1AdTozqXHBHjzbwM8rkY4dtvOc.jpg"
-                alt="Customer Satisfaction"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/1000_F_418370947_YmhKbbqmH20KtySvICWIUAQTewI16DRV.jpg"
-                alt="Quality Service"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/100_-Customer-Satisfaction-scaled.webp"
-                alt="Customer Satisfaction"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/325098.png"
-                alt="Certification Badge"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/360_F_52353227_QN4uFwGBnLfLtZzAxacByJujbzneuGMB.jpg"
-                alt="Service Award"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/576-5768110_groupon-mostra-il-meglio-dellitalia-heineken-serving-the.png"
-                alt="Groupon Partner"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/673b02970b7a6d75beef9fa5_AngiSuperService_2024.png"
-                alt="Angi Super Service Award"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/904490.jpg"
-                alt="Service Excellence"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/9702949-100-satisfaction-guaranteed-sign.jpg"
-                alt="Satisfaction Guarantee"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/Reel-Hosepower-5-Star-Google-Ratings.webp"
-                alt="5 Star Google Reviews"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/Thumbtack-Alternatives.jpg"
-                alt="Thumbtack Alternative"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/Thumbtack-Top-Pro-2024.png"
-                alt="Thumbtack Top Pro 2024"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/carpet-cleaning-guarantee.avif"
-                alt="Carpet Cleaning Guarantee"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/eco-label-eco-friendly-logo-organic-natural-product-icon_349999-1444.jpg"
-                alt="Eco-Friendly Products"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/green-labels_54199-401.avif"
-                alt="Natural Products"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/zelenaya-kruglaya-etikatka-sto-protsentov-naturalnoe-0005901658-preview.jpg"
-                alt="100% Natural"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/выбор-зе-еного-яр-ыка-самый-учший-с-вектором-ент-32740210.webp"
-                alt="Best Choice Award"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-
-              {/* Duplicate set for seamless loop */}
-              <img
-                src="/images/logos/100-satisfaction-guaranteed-gold-label-with-red-ribbon-i-free-vector.jpg"
-                alt="100% Satisfaction Guaranteed"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/1000_F_302829249_sGra3Q1AdTozqXHBHjzbwM8rkY4dtvOc.jpg"
-                alt="Customer Satisfaction"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/1000_F_418370947_YmhKbbqmH20KtySvICWIUAQTewI16DRV.jpg"
-                alt="Quality Service"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/100_-Customer-Satisfaction-scaled.webp"
-                alt="Customer Satisfaction"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/325098.png"
-                alt="Certification Badge"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/360_F_52353227_QN4uFwGBnLfLtZzAxacByJujbzneuGMB.jpg"
-                alt="Service Award"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/576-5768110_groupon-mostra-il-meglio-dellitalia-heineken-serving-the.png"
-                alt="Groupon Partner"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/673b02970b7a6d75beef9fa5_AngiSuperService_2024.png"
-                alt="Angi Super Service Award"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/904490.jpg"
-                alt="Service Excellence"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/9702949-100-satisfaction-guaranteed-sign.jpg"
-                alt="Satisfaction Guarantee"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/Reel-Hosepower-5-Star-Google-Ratings.webp"
-                alt="5 Star Google Reviews"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/Thumbtack-Alternatives.jpg"
-                alt="Thumbtack Alternative"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/Thumbtack-Top-Pro-2024.png"
-                alt="Thumbtack Top Pro 2024"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/carpet-cleaning-guarantee.avif"
-                alt="Carpet Cleaning Guarantee"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/eco-label-eco-friendly-logo-organic-natural-product-icon_349999-1444.jpg"
-                alt="Eco-Friendly Products"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/green-labels_54199-401.avif"
-                alt="Natural Products"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/zelenaya-kruglaya-etikatka-sto-protsentov-naturalnoe-0005901658-preview.jpg"
-                alt="100% Natural"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
-              <img
-                src="/images/logos/выбор-зе-еного-яр-ыка-самый-учший-с-вектором-ент-32740210.webp"
-                alt="Best Choice Award"
-                className="h-16 w-auto object-contain flex-shrink-0 hover:scale-110 transition-transform duration-300"
-              />
+            {/* Right Content */}
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold text-blue-950">
+                GreenLine: Experts in the Science of Clean™
+              </h2>
+              
+              <p className="text-xl font-semibold text-green-700">
+                Eco-friendly people and technology you can trust.
+              </p>
+              
+              <p className="text-gray-600 leading-relaxed">
+                Our GreenLine specialists use advanced steam cleaning technology to deliver a deeper, more thorough clean that lasts longer.
+              </p>
+              
+              <p className="text-gray-600 leading-relaxed">
+                Our proprietary Zr™ Water technology cleans without harsh chemicals, soaps, or detergents. This eco-friendly approach removes dirt and grime while being safe for your family, pets, and the environment. Your carpets stay cleaner longer without toxic residue.
+              </p>
+              
+              <p className="text-green-700 font-medium">
+                See what our satisfied customers say!
+              </p>
+              
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-green-700 font-medium">100% Safe for Family, Pets, and Environment</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-green-700 font-medium">Advanced Steam Cleaning Technology</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="text-green-700 font-medium">Certified Professional Cleaning Service</span>
+                </div>
+              </div>
+              
+              <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 text-lg font-semibold">
+                SCHEDULE SERVICE
+              </Button>
             </div>
           </div>
         </div>
@@ -370,50 +273,145 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Us Section */}
-      <section className="py-20 px-4 bg-slate-50">
+      <ReviewsCarousel />
+
+      {/* Google Reviews Section */}
+      {/* <section className="py-20 px-4 bg-slate-50">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Left Column - Title */}
-            <div className="lg:sticky lg:top-20">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                About GreenLine
-              </h2>
-              <div className="w-16 h-1 bg-green-500 mb-6"></div>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                With over 15 years of experience, we&apos;ve been providing top-quality cleaning services to homes and businesses.
-              </p>
-            </div>
-
-            {/* Right Column - Content */}
-            <div className="space-y-8">
-              <div>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  We are a professional carpet and upholstery cleaning company, dedicated to improving the quality of our services every day. We believe that high service standards are not just words but the foundation of long-term relationships with our clients.
-                </p>
-                <p className="text-gray-600 leading-relaxed mb-8">
-                  That&apos;s why we constantly work to make our services even better and more convenient for you. Our commitment to excellence and eco-friendly solutions has made us the trusted choice.
-                </p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              What Our Customers Say
+            </h2>
+            <div className="flex items-center justify-center space-x-2 mb-4">
+              <div className="flex space-x-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
+                ))}
               </div>
-
-              <div className="aspect-[4/3] rounded-2xl relative overflow-hidden mb-6" style={{backgroundImage: "url('/images/XXL.webp')", backgroundSize: "cover", backgroundPosition: "center"}}></div>
-
-              {/* Navigation button */}
-              <Link
-                href="/about"
-                className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-green-600 rounded-md hover:bg-green-700 transition duration-300"
-              >
-                Learn More About Us
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              <span className="text-lg font-semibold text-gray-700">4.9/5 on Google</span>
             </div>
           </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex space-x-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <p className="text-gray-600 mb-4">
+                "They did an awesome job deep cleaning our couch. Quick response time, he was here in less than 24 hours. Would highly recommend and will be using again!"
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-semibold">
+                  P
+                </div>
+                <div className="ml-3">
+                  <p className="font-semibold text-gray-900">Peyton Campbell</p>
+                  <p className="text-sm text-gray-500">3 months ago</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex space-x-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <p className="text-gray-600 mb-4">
+                "Anton did a wonderful job cleaning the apartment I'm moving out of. The carpet looks brand new. He was quick and professional! Will definitely recommend services in the future."
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white font-semibold">
+                  N
+                </div>
+                <div className="ml-3">
+                  <p className="font-semibold text-gray-900">Nicole Cunningham</p>
+                  <p className="text-sm text-gray-500">9 months ago</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex space-x-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <p className="text-gray-600 mb-4">
+                "Anton was awesome! Very responsive and helpful. He did a great job on my carpets 10/10 recommend. I will be calling him again!"
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center text-white font-semibold">
+                  S
+                </div>
+                <div className="ml-3">
+                  <p className="font-semibold text-gray-900">Sarah Talcott</p>
+                  <p className="text-sm text-gray-500">11 months ago</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-8">
+            <a 
+              href="https://www.google.com/maps/place/Green+Line+Carpet+Cleaning/@39.8242645,-104.9505154,17z"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
+            >
+              View All Reviews on Google
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </section> */}
+
+      {/* Trust Badges Carousel */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto space-y-8">
+          <Carousel className="w-full max-w-5xl mx-auto" opts={{ align: "start", loop: true }} plugins={[plugin1.current]}>
+            <CarouselContent className="-ml-2 md:-ml-4">
+              <CarouselItem className="pl-2 md:pl-4 basis-1/3 md:basis-1/5">
+                <img src="/images/logos/head-1.webp" alt="Trust Badge 1" className="h-16 w-auto object-contain mx-auto" />
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/3 md:basis-1/5">
+                <img src="/images/logos/head-2.jpg" alt="Trust Badge 2" className="h-16 w-auto object-contain mx-auto" />
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/3 md:basis-1/5">
+                <img src="/images/logos/head-3.jpg" alt="Trust Badge 3" className="h-20 w-auto object-contain mx-auto" />
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/3 md:basis-1/5">
+                <img src="/images/logos/head-4.jpeg" alt="Trust Badge 4" className="h-16 w-auto object-contain mx-auto" />
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/3 md:basis-1/5">
+                <img src="/images/logos/head-5.png" alt="Trust Badge 5" className="h-16 w-auto object-contain mx-auto" />
+              </CarouselItem>
+            </CarouselContent>
+          </Carousel>
+          
+          <Carousel className="w-full max-w-5xl mx-auto" opts={{ align: "start", loop: true }} plugins={[plugin2.current]}>
+            <CarouselContent className="-ml-2 md:-ml-4">
+              <CarouselItem className="pl-2 md:pl-4 basis-1/3 md:basis-1/5">
+                <img src="/images/logos/bottom-1.jpg" alt="Certification 1" className="h-16 w-auto object-contain mx-auto" />
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/3 md:basis-1/5">
+                <img src="/images/logos/bottom-2.png" alt="Certification 2" className="h-16 w-auto object-contain mx-auto" />
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/3 md:basis-1/5">
+                <img src="/images/logos/bottom-3.png" alt="Certification 3" className="h-20 w-auto object-contain mx-auto" />
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/3 md:basis-1/5">
+                <img src="/images/logos/bottom-4.avif" alt="Certification 4" className="h-16 w-auto object-contain mx-auto" />
+              </CarouselItem>
+              <CarouselItem className="pl-2 md:pl-4 basis-1/3 md:basis-1/5">
+                <img src="/images/logos/bottom-5.jpg" alt="Certification 5" className="h-16 w-auto object-contain mx-auto" />
+              </CarouselItem>
+            </CarouselContent>
+          </Carousel>
         </div>
       </section>
-
-      <BeforeAfterSlider />
-
-      <ReviewsCarousel />
 
     </div>
   );
