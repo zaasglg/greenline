@@ -157,7 +157,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {/* Steam Carpet Cleaning */}
-            <div className="group cursor-pointer flex flex-col h-full">
+            <Link href="/services/carpet-cleaning" className="group cursor-pointer flex flex-col h-full">
               <div className="aspect-[4/3] rounded-t-lg overflow-hidden mb-0">
                 <img
                   src="/images/sofa.jpg"
@@ -171,10 +171,10 @@ export default function Home() {
                   <ChevronRight className="w-5 h-5" />
                 </h3>
               </div>
-            </div>
+            </Link>
 
             {/* Steam Cleaning Upholstery */}
-            <div className="group cursor-pointer flex flex-col h-full">
+            <Link href="/services/upholstery-cleaning-and-sanitizing" className="group cursor-pointer flex flex-col h-full">
               <div className="aspect-[4/3] rounded-t-lg overflow-hidden mb-0">
                 <img
                   src="/images/carpet.jpg"
@@ -188,10 +188,10 @@ export default function Home() {
                   <ChevronRight className="w-5 h-5" />
                 </h3>
               </div>
-            </div>
+            </Link>
 
             {/* Steam Cleaning Mattress and Vehicle */}
-            <div className="group cursor-pointer flex flex-col h-full">
+            <Link href="/services/mattress-cleaning" className="group cursor-pointer flex flex-col h-full">
               <div className="aspect-[4/3] rounded-t-lg overflow-hidden mb-0">
                 <img
                   src="/images/matrex.webp"
@@ -205,7 +205,7 @@ export default function Home() {
                   <ChevronRight className="w-5 h-5" />
                 </h3>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
 
