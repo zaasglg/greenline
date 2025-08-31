@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, ChevronDown, Phone, Clock, Mail, MapPin } from "lucide-react";
+import { List, X, CaretDown, Phone, Clock, Envelope, MapPin } from "phosphor-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -31,15 +31,19 @@ const Header = () => {
   ];
 
   const services = [
-    { name: "Carpet Cleaning", href: "/services/carpet-cleaning" },
-    { name: "Carpet Sanitizer", href: "/services/carpet-sanitizer" },
-    { name: "Rug Cleaning", href: "/services/rug-cleaning" },
-    { name: "Upholstery Cleaning", href: "/services/upholstery-cleaning" },
+  { name: "CARPET CLEANING", href: "/services/carpet-cleaning" },
+  { name: "Rug Cleaning", href: "/services/rug-cleaning" },
+  { name: "Professional Upholstery Cleaning", href: "/services/professional-upholstery-cleaning" },
+  { name: "Carpet Sanitizer", href: "/services/carpet-sanitizer" },
+  { name: "Upholstery Cleaning and Sanitizing", href: "/services/upholstery-cleaning-and-sanitizing" },
+  { name: "COVID-19", href: "/services/covid-19" },
+  { name: "Mattress Cleaning", href: "/services/mattress-cleaning" },
+  { name: "Pet Carpet Cleaning", href: "/services/pet-carpet-cleaning" },
   ];
 
   const InfoItem = ({ icon, title, subtitle, href }) => (
     <div className="flex items-center space-x-3">
-      <div className="text-blue-500">{icon}</div>
+      <div className="text-sky-400">{icon}</div>
       <div>
         <p className="text-sm text-gray-600 font-medium">{title}</p>
         {href ? (
@@ -57,9 +61,9 @@ const Header = () => {
     <div className="relative">
       {item.hasDropdown ? (
         <DropdownMenu>
-          <DropdownMenuTrigger className="flex items-center space-x-1 text-white hover:text-blue-200 font-medium text-base transition-colors py-2 focus:outline-none">
+          <DropdownMenuTrigger className="flex items-center space-x-1 text-white hover:text-blue-200 font-medium text-lg transition-colors py-2 focus:outline-none">
             <span>{item.name}</span>
-            <ChevronDown className="h-4 w-4" />
+            <CaretDown className="h-4 w-4" weight="fill" />
           </DropdownMenuTrigger>
           <DropdownMenuContent align="center" className="w-64 bg-white border-gray-200 shadow-xl">
             <div className="py-2">
@@ -67,7 +71,7 @@ const Header = () => {
                 <DropdownMenuItem key={service.name} asChild>
                   <Link
                     href={service.href}
-                    className="flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
+                    className="flex items-center px-4 py-3 text-base text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -79,7 +83,7 @@ const Header = () => {
       ) : (
         <Link
           href={item.href}
-          className="text-white hover:text-blue-200 font-medium text-base transition-colors py-2"
+          className="text-white hover:text-blue-200 font-medium text-xl transition-colors py-2"
         >
           {item.name}
         </Link>
@@ -99,35 +103,41 @@ const Header = () => {
           <div className="flex items-center h-24">
             <div className="flex-1 flex items-center justify-end space-x-6">
               <InfoItem
-                icon={<Phone size={32} />}
+                icon={<Phone size={32} weight="fill" />}
                 title="Call For Help"
                 subtitle="+1 970-368-2626"
                 href="tel:+19703682626"
               />
               <div className="h-10 border-r border-gray-300"></div>
               <InfoItem
-                icon={<Clock size={32} />}
+                icon={<Clock size={32} weight="fill" />}
                 title="Monday-Saturday"
                 subtitle="8am - 8pm"
               />
             </div>
 
             {/* Spacer for the absolute positioned logo */}
-            <div className="w-48 flex-shrink-0"></div>
+            <div className="w-56 flex-shrink-0"></div>
 
             <div className="flex-1 flex items-center justify-start space-x-6">
               <InfoItem
-                icon={<Mail size={32} />}
+                icon={<Envelope size={32} weight="fill" />}
                 title="Mail to us"
                 subtitle="greenlaine@gmail.com"
                 href="mailto:carpet.couch.clean@gmail.com"
               />
               <div className="h-10 border-r border-gray-300"></div>
               <InfoItem
-                icon={<MapPin size={32} />}
+                icon={
+                  <div className="flex items-center space-x-2">
+                    <MapPin size={32} weight="fill" />
+                  </div>
+                }
                 title="Arvada, CO 80003"
                 subtitle="United States"
               />
+              {/* Separator after address */}
+              <img src="/images/logos/bottom-3.png" alt="icon" className="w-16" />
             </div>
           </div>
         </div>
@@ -142,16 +152,19 @@ const Header = () => {
         </Link>
       </div>
 
+      {/* Separator Line */}
+      <div className="hidden lg:block h-px bg-gray-200"></div>
+
       {/* Navigation Bar - Blue Bar */}
-      <div className="bg-blue-500">
+      <div className="bg-sky-300" >
         <div className="container mx-auto px-4">
           {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center h-16">
-            <div className="flex-1 flex items-center justify-end space-x-10">
+            <div className="flex-1 flex items-center justify-end space-x-20">
                 {navLeft.map((item) => <NavLink key={item.name} item={item} />)}
             </div>
-              <div className="w-40 flex-shrink-0"></div>
-            <div className="flex-1 flex items-center justify-start space-x-10">
+              <div className="w-48 flex-shrink-0"></div>
+            <div className="flex-1 flex items-center justify-start space-x-20">
                 {navRight.map((item) => <NavLink key={item.name} item={item} />)}
             </div>
           </nav>
@@ -168,7 +181,7 @@ const Header = () => {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="text-gray-800">
-                  <Menu className="h-6 w-6" />
+                  <List className="h-6 w-6" weight="fill" />
                   <span className="sr-only">Toggle menu</span>
                 </Button>
               </SheetTrigger>
@@ -218,19 +231,19 @@ const Header = () => {
                   {/* Mobile Contact Info */}
                   <div className="border-t pt-6 mt-6 space-y-4">
                      <InfoItem
-                        icon={<Phone size={24} />}
+                        icon={<Phone size={24} weight="fill" />}
                         title="Call For Help"
                         subtitle="+1 970-368-2626"
                         href="tel:+19703682626"
                       />
                       <InfoItem
-                        icon={<Mail size={24} />}
+                        icon={<Envelope size={24} weight="fill" />}
                         title="Mail to us"
                         subtitle="carpet.couch.clean@gmail.com"
                         href="mailto:carpet.couch.clean@gmail.com"
                       />
                       <InfoItem
-                        icon={<Clock size={24} />}
+                        icon={<Clock size={24} weight="fill" />}
                         title="Monday-Saturday"
                         subtitle="8am - 8pm"
                       />

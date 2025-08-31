@@ -3,6 +3,7 @@
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Link from "next/link";
 
 const reviews = [
   {
@@ -48,7 +49,7 @@ export default function ReviewsCarousel() {
             ))}
           </div>
           <h2 className="text-4xl font-bold text-slate-900 mb-6">
-            Over 190,000 5-Star Reviews
+            Our Reviews
           </h2>
           <p className="text-lg text-slate-600 max-w-4xl mx-auto">
             We love our customers, and they love us back as 90% of our customers would refer GreenLine Cleaning to a friend.
@@ -88,12 +89,11 @@ export default function ReviewsCarousel() {
 
         {/* CTA Button */}
         <div className="text-center mt-12">
-          <Button
-            size="lg"
-            className="bg-slate-800 hover:bg-slate-900 text-white font-semibold px-8 py-4 underline"
-          >
-            Schedule Service
-          </Button>
+          <Link href="/booking">
+            <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 text-lg font-semibold">
+              SCHEDULE SERVICE
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

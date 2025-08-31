@@ -16,14 +16,6 @@ export default function CarpetCleaningPage() {
             Tired of looking at a dull carpet with spots that just won&apos;t come out?
             Dirt works its way deep into the fibers, clinging tight. In those high‑traffic areas, oils and grime build up, leaving your carpet looking worn and tired. And it&apos;s not just about looks — that buildup can hold on to bacteria and allergens that affect your family&apos;s health.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg font-medium shadow-lg">
-              Get Free Quote
-            </Button>
-            <Button className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900 px-8 py-3 text-lg font-medium">
-              Call: +1 720 462 8866
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -156,24 +148,15 @@ export default function CarpetCleaningPage() {
             </div>
           </div>
 
-          <div className="bg-slate-50 p-6 rounded text-center border border-slate-200">
-            <Phone className="w-16 h-16 text-emerald-600 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">
-              📞 Call or message us today — your carpet could be fresh, clean, and safe for your family by tomorrow.
-            </h3>
-            <p className="text-xl text-emerald-600 font-semibold mb-6">
-              Let&apos;s bring your carpet back to life now.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg font-medium shadow-lg">
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now for FREE Consultation
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/booking">
+              <Button className="bg-sky-700 hover:bg-sky-900 text-white px-8 py-3 text-lg font-medium">
+                Book Online
               </Button>
-              <Button className="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white px-8 py-3 text-lg font-medium">
-                Get Free Quote
-              </Button>
-            </div>
+            </a>
           </div>
+
         </div>
       </section>
     </div>

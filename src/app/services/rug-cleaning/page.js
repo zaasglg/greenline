@@ -15,14 +15,6 @@ export default function RugCleaningPage() {
           <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed mb-8">
             Area rugs do more than just decorate your home — they protect the floors underneath and add warmth to any room. Because they handle a lot of foot traffic and daily wear, they need regular cleaning to stay fresh. Without proper care, rugs start to look dingy and worn out.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg font-medium shadow-lg">
-              Get Free Quote
-            </Button>
-            <Button className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900 px-8 py-3 text-lg font-medium">
-              Call: +1 720 462 8866
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -122,24 +114,11 @@ export default function RugCleaningPage() {
             </div>
           </div>
 
-          <div className="bg-slate-50 p-6 rounded text-center border border-slate-200">
-            <Phone className="w-16 h-16 text-emerald-600 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">
-              Ready to restore your rugs?
-            </h3>
-            <p className="text-xl text-emerald-600 font-semibold mb-6">
-              Contact us today for professional rug cleaning services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg font-medium shadow-lg">
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now for FREE Consultation
-              </Button>
-              <Button className="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white px-8 py-3 text-lg font-medium">
-                Get Free Quote
-              </Button>
-            </div>
-          </div>
+              <a href="/booking">
+                <Button className="bg-sky-700 hover:bg-sky-900 text-white px-8 py-3 text-lg font-medium">
+                  Book Online
+                </Button>
+              </a>
         </div>
       </section>
     </div>

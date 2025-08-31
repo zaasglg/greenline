@@ -15,14 +15,6 @@ export default function CarpetSanitizerPage() {
           <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed mb-8">
             Home is your sanctuary — a place to leave the world&apos;s worries behind. GreenLine Cleaning&apos;s carpet sanitizer is designed to help with that. This EPA-registered product effectively kills odor-causing bacteria trapped in carpets and upholstery.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg font-medium shadow-lg">
-              Get Free Quote
-            </Button>
-            <Button className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900 px-8 py-3 text-lg font-medium">
-              Call: +1 720 462 8866
-            </Button>
-          </div>
         </div>
       </section>
 
@@ -219,13 +211,11 @@ export default function CarpetSanitizerPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 text-lg font-medium shadow-lg">
-              <Phone className="w-5 h-5 mr-2" />
-              Call Scheduling Center
-            </Button>
-            <Button className="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white px-8 py-3 text-lg font-medium">
-              Get Free Quote
-            </Button>
+            <a href="/booking">
+              <Button className="bg-sky-700 hover:bg-sky-900 text-white px-8 py-3 text-lg font-medium">
+                Book Online
+              </Button>
+            </a>
           </div>
         </div>
       </section>
