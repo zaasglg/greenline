@@ -40,24 +40,24 @@ const reviews = [
 
 export default function ReviewsCarousel() {
   return (
-    <section className="py-20 px-4 bg-white">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <div className="flex justify-center items-center space-x-1 mb-6">
+    <section className="py-20 2xl:py-32 px-4 bg-white">
+      <div className="w-8/12 2xl:w-10/12 mx-auto">
+        <div className="text-center mb-16 2xl:mb-24">
+          <div className="flex justify-center items-center space-x-1 mb-6 2xl:mb-8">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-8 h-8 fill-orange-400 text-orange-400" />
+              <Star key={i} className="w-8 h-8 2xl:w-12 2xl:h-12 fill-orange-400 text-orange-400" />
             ))}
           </div>
-          <h2 className="text-4xl font-bold text-slate-900 mb-6">
+          <h2 className="text-4xl 2xl:text-8xl font-bold text-slate-900 mb-6 2xl:mb-8">
             Our Reviews
           </h2>
-          <p className="text-lg text-slate-600 max-w-4xl mx-auto">
+          <p className="text-lg 2xl:text-3xl text-slate-600 max-w-4xl mx-auto">
             We love our customers, and they love us back as 90% of our customers would refer GreenLine Cleaning to a friend.
           </p>
         </div>
 
         {/* Reviews Carousel */}
-        <div className="relative max-w-5xl mx-auto">
+        <div className="relative">
           <Carousel
             opts={{
               align: "start",
@@ -68,16 +68,16 @@ export default function ReviewsCarousel() {
             <CarouselContent className="-ml-2 md:-ml-4">
               {reviews.map((review) => (
                 <CarouselItem key={review.id} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="p-6 text-center">
-                    <div className="flex justify-center space-x-1 mb-4">
+                  <div className="p-6 2xl:p-8 text-center">
+                    <div className="flex justify-center space-x-1 mb-4 2xl:mb-6">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 fill-blue-500 text-blue-500" />
+                        <Star key={i} className="w-5 h-5 2xl:w-8 2xl:h-8 fill-blue-500 text-blue-500" />
                       ))}
                     </div>
-                    <p className="text-slate-700 leading-relaxed mb-6 italic">
+                    <p className="text-slate-700 2xl:text-2xl leading-relaxed mb-6 2xl:mb-8 italic">
                       &ldquo;{review.text}&rdquo;
                     </p>
-                    <p className="text-slate-600 font-medium">~ {review.author}</p>
+                    <p className="text-slate-600 2xl:text-xl font-medium">~ {review.author}</p>
                   </div>
                 </CarouselItem>
               ))}
@@ -88,9 +88,9 @@ export default function ReviewsCarousel() {
         </div>
 
         {/* CTA Button */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 2xl:mt-16">
           <Link href="/booking">
-            <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 text-lg font-semibold">
+            <Button className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 text-lg 2xl:px-16 2xl:py-6 2xl:text-3xl font-semibold">
               SCHEDULE SERVICE
             </Button>
           </Link>

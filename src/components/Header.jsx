@@ -41,37 +41,48 @@ const Header = () => {
   { name: "Pet Carpet Cleaning", href: "/services/pet-carpet-cleaning" },
   ];
 
-  const InfoItem = ({ icon, title, subtitle, href }) => (
-    <div className="flex items-center space-x-3">
-      <div className="text-sky-400">{icon}</div>
-      <div>
-        <p className="text-sm text-gray-600 font-medium">{title}</p>
-        {href ? (
-          <a href={href} className="font-bold text-gray-800 hover:text-blue-500 transition-colors whitespace-nowrap">
-            {subtitle}
-          </a>
-        ) : (
-          <p className="font-bold text-gray-800 whitespace-nowrap">{subtitle}</p>
-        )}
-      </div>
+const InfoItem = ({ icon, title, subtitle, href }) => (
+  <div className="flex items-center space-x-3 2xl:space-x-4">
+    <div className="text-sky-400">{icon}</div>
+    <div>
+      {/* title — просто текст */}
+      <p className="text-sm 2xl:text-2xl text-gray-600 font-medium">
+        {title}
+      </p>
+
+      {/* subtitle — может быть HTML */}
+      {href ? (
+        <a
+          href={href}
+          className="font-bold text-gray-800 2xl:text-3xl hover:text-blue-500 transition-colors whitespace-nowrap"
+          dangerouslySetInnerHTML={{ __html: subtitle }}
+        />
+      ) : (
+        <p
+          className="font-bold text-gray-800 2xl:text-3xl whitespace-nowrap"
+          dangerouslySetInnerHTML={{ __html: subtitle }}
+        />
+      )}
     </div>
-  );
+  </div>
+);
+
 
   const NavLink = ({ item }) => (
     <div className="relative">
       {item.hasDropdown ? (
         <DropdownMenu>
-          <DropdownMenuTrigger className="flex items-center space-x-1 text-white hover:text-blue-200 font-medium text-lg transition-colors py-2 focus:outline-none">
+          <DropdownMenuTrigger className="flex items-center space-x-1 text-white hover:text-blue-200 font-medium text-lg 2xl:text-3xl transition-colors py-2 focus:outline-none">
             <span>{item.name}</span>
             <CaretDown className="h-4 w-4" weight="fill" />
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="center" className="w-64 bg-white border-gray-200 shadow-xl">
+          <DropdownMenuContent align="center" className="w-64 2xl:w-[400px] bg-white border-gray-200 shadow-xl">
             <div className="py-2">
               {services.map((service) => (
                 <DropdownMenuItem key={service.name} asChild>
                   <Link
                     href={service.href}
-                    className="flex items-center px-4 py-3 text-base text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
+                    className="flex items-center px-4 py-3 text-base 2xl:text-3xl text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -83,7 +94,7 @@ const Header = () => {
       ) : (
         <Link
           href={item.href}
-          className="text-white hover:text-blue-200 font-medium text-xl transition-colors py-2"
+          className="text-white hover:text-blue-200 font-medium text-xl 2xl:text-4xl transition-colors py-2"
         >
           {item.name}
         </Link>
@@ -99,29 +110,29 @@ const Header = () => {
     <header className="relative">
       {/* Top Section - White Bar */}
       <div className="bg-white">
-        <div className="container mx-auto px-4 hidden lg:block">
-          <div className="flex items-center h-24">
+        <div className="w-10/12 mx-auto px-4 hidden lg:block">
+          <div className="flex items-center h-24 2xl:h-40">
             <div className="flex-1 flex items-center justify-end space-x-6">
               <InfoItem
-                icon={<Phone size={32} weight="fill" />}
+                icon={<Phone size={32} className="2xl:w-18 2xl:h-18" weight="fill" />}
                 title="Call For Help"
-                subtitle="+1 970-368-2626"
-                href="tel:+19703682626"
+                subtitle="+1 720-462-8866"
+                href="tel:+17204628866"
               />
               <div className="h-10 border-r border-gray-300"></div>
               <InfoItem
-                icon={<Clock size={32} weight="fill" />}
+                icon={<Clock size={32} className="2xl:w-18 2xl:h-18" weight="fill" />}
                 title="Monday-Saturday"
-                subtitle="8am - 8pm"
+                subtitle="9am - 9pm"
               />
             </div>
 
             {/* Spacer for the absolute positioned logo */}
-            <div className="w-56 flex-shrink-0"></div>
+            <div className="w-56 2xl:w-96 flex-shrink-0"></div>
 
             <div className="flex-1 flex items-center justify-start space-x-6">
               <InfoItem
-                icon={<Envelope size={32} weight="fill" />}
+                icon={<Envelope size={32} className="2xl:w-18 2xl:h-18" weight="fill" />}
                 title="Mail to us"
                 subtitle="greenlaine@gmail.com"
                 href="mailto:carpet.couch.clean@gmail.com"
@@ -130,24 +141,22 @@ const Header = () => {
               <InfoItem
                 icon={
                   <div className="flex items-center space-x-2">
-                    <MapPin size={32} weight="fill" />
+                    <MapPin size={32} className="2xl:w-18 2xl:h-18" weight="fill" />
                   </div>
                 }
-                title="Arvada, CO 80003"
-                subtitle="United States"
+                title="Address"
+                subtitle="<span>9855 E Louisiana dr <br /> Aurora Colorado 80247<span>"
               />
-              {/* Separator after address */}
-              <img src="/images/logos/bottom-3.png" alt="icon" className="w-16" />
             </div>
           </div>
         </div>
       </div>
 
       {/* Overlapping Logo */}
-      <div className="hidden lg:block absolute top-8 left-1/2 -translate-x-1/2 z-20">
+      <div className="hidden lg:block absolute top-6 left-1/2 -translate-x-1/2 z-20">
         <Link href="/">
-          <div className="bg-white rounded-full p-2 shadow-lg border-4 border-white">
-            <img src="/images/logo.png" alt="GreenLine logo" className="h-32 w-32" />
+          <div className="bg-white rounded-full p-4 2xl:p-6 shadow-lg border-4 2xl:border-6 border-white">
+            <img src="/images/logo.png" alt="GreenLine logo" className="h-32 w-32 2xl:h-52 2xl:w-52" />
           </div>
         </Link>
       </div>
@@ -157,14 +166,14 @@ const Header = () => {
 
       {/* Navigation Bar - Blue Bar */}
       <div className="bg-sky-300" >
-        <div className="container mx-auto px-4">
+        <div className="w-10/12 mx-auto px-4">
           {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center h-16">
-            <div className="flex-1 flex items-center justify-end space-x-20">
+            <nav className="hidden lg:flex items-center h-16 2xl:h-28">
+            <div className="flex-1 flex items-center justify-end space-x-20 2xl:space-x-32">
                 {navLeft.map((item) => <NavLink key={item.name} item={item} />)}
             </div>
-              <div className="w-48 flex-shrink-0"></div>
-            <div className="flex-1 flex items-center justify-start space-x-20">
+              <div className="w-48 2xl:w-72 flex-shrink-0"></div>
+            <div className="flex-1 flex items-center justify-start space-x-20 2xl:space-x-28">
                 {navRight.map((item) => <NavLink key={item.name} item={item} />)}
             </div>
           </nav>
@@ -233,19 +242,19 @@ const Header = () => {
                      <InfoItem
                         icon={<Phone size={24} weight="fill" />}
                         title="Call For Help"
-                        subtitle="+1 970-368-2626"
-                        href="tel:+19703682626"
+                        subtitle="+1 720-462-8866"
+                        href="tel:+17204628866"
                       />
                       <InfoItem
                         icon={<Envelope size={24} weight="fill" />}
                         title="Mail to us"
-                        subtitle="carpet.couch.clean@gmail.com"
-                        href="mailto:carpet.couch.clean@gmail.com"
+                        subtitle="greenlinecarpetco@gmail.com"
+                        href="mailto:greenlinecarpetco@gmail.com"
                       />
                       <InfoItem
                         icon={<Clock size={24} weight="fill" />}
                         title="Monday-Saturday"
-                        subtitle="8am - 8pm"
+                        subtitle="9am - 9pm"
                       />
                   </div>
                 </div>

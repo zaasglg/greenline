@@ -57,11 +57,7 @@ export default function CarpetCleaningPage() {
 
             <div className="relative">
               <div className="aspect-[4/5] rounded-2xl relative overflow-hidden shadow-lg">
-                <img
-                  src="/images/res_1.JPG"
-                  alt="Professional carpet cleaning equipment"
-                  className="w-full h-full object-cover"
-                />
+                <video src="/portfolio/videos/cc293880-5d81-47f9-b54c-8b323f16ef75.mp4" muted autoPlay></video>
               </div>
             </div>
           </div>
@@ -74,11 +70,7 @@ export default function CarpetCleaningPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <div className="aspect-[4/5] rounded-2xl relative overflow-hidden shadow-lg">
-                <img
-                  src="/images/res_2.JPG"
-                  alt="Clean living room with beautiful carpet"
-                  className="w-full h-full object-cover"
-                />
+                <video src="/portfolio/videos/An9Mo4XNmB3tCtOYL8DC5TXfzrWL8Ual5wkAe5bpp6N29YdTY5oLGViiekp0iqw.mp4" muted autoPlay></video>
               </div>
             </div>
 
