@@ -157,6 +157,7 @@ export default function PortfolioPage() {
             <span className="text-sm 2xl:text-xl">Showing {filteredVideos.length} project{filteredVideos.length !== 1 ? 's' : ''}</span>
           </div>
         </div>
+        
       </section>
 
       {/* Portfolio Grid */}

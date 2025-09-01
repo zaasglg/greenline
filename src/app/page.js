@@ -95,11 +95,9 @@ export default function Home() {
               <h1 className="text-3xl md:text-4xl lg:text-4xl 2xl:text-7xl font-bold leading-tight text-white uppercase max-w-lg lg:max-w-xl 2xl:max-w-3xl">
                 GreenLine, the Right <br /> Way to Clean
               </h1>
-
               <p className="text-base md:text-md lg:text-base 2xl:text-3xl leading-relaxed max-w-lg lg:max-w-md 2xl:max-w-3xl text-white/90">
                 Refresh and renew your carpets the safe, professional way with GreenLine. We clean using our proprietary Water—no soaps or harsh chemicals. Enjoy a deep, fast-drying clean that's safe for your family and pets, and trusted by over 400,000 customers each year.
               </p>
-
               <Link href="/booking">
                 <Button
                   size="lg"
@@ -195,7 +193,7 @@ export default function Home() {
             <Link href="/services/carpet-cleaning" className="group cursor-pointer flex flex-col h-full">
               <div className="aspect-[4/3] rounded-t-lg overflow-hidden mb-0">
                 <img
-                  src="/images/carpet.jpg"
+                  src="/images/sofa.jpg"
                   alt="Steam carpet cleaning"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -212,7 +210,7 @@ export default function Home() {
             <Link href="/services/upholstery-cleaning-and-sanitizing" className="group cursor-pointer flex flex-col h-full">
               <div className="aspect-[4/3] rounded-t-lg overflow-hidden mb-0">
                 <img
-                  src="/images/sofa.jpg"
+                  src="/images/carpet.jpg"
                   alt="Steam cleaning upholstery"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
