@@ -110,7 +110,7 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
     <header className="relative">
       {/* Top Section - White Bar */}
       <div className="bg-white">
-        <div className="w-10/12 mx-auto px-4 hidden lg:block">
+        <div className="w-full mx-auto px-4 hidden lg:block">
           <div className="flex items-center h-24 2xl:h-40">
             <div className="flex-1 flex items-center justify-end space-x-6">
               <InfoItem
@@ -134,8 +134,8 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
               <InfoItem
                 icon={<Envelope size={32} className="2xl:w-18 2xl:h-18" weight="fill" />}
                 title="Mail to us"
-                subtitle="greenlaine@gmail.com"
-                href="mailto:carpet.couch.clean@gmail.com"
+                subtitle="greenlinecarpetco@gmail.com"
+                href="mailto:greenlinecarpetco@gmail.com"
               />
               <div className="h-10 border-r border-gray-300"></div>
               <InfoItem
@@ -166,7 +166,7 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
 
       {/* Navigation Bar - Blue Bar */}
       <div className="bg-sky-300" >
-        <div className="w-10/12 mx-auto px-4">
+        <div className="container mx-auto px-4">
           {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center h-16 2xl:h-28">
             <div className="flex-1 flex items-center justify-end space-x-20 2xl:space-x-32">

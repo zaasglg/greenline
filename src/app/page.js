@@ -20,11 +20,17 @@ function HeroMobileSection() {
             Refresh and renew your carpets the safe, professional way with GreenLine. We clean using our proprietary Water—no soaps or harsh chemicals. Enjoy a deep, fast-drying clean that's safe for your family and pets, and trusted by over 400,000 customers each year.
           </p>
           <div className="flex flex-row items-center justify-center space-x-6 mb-8">
-            <Link href="/booking">
+            {/* <Link href="/booking">
               <Button
                 size="lg"
-                className="w-[200px] h-[56px] bg-sky-700 hover:bg-sky-900 text-white font-bold px-8 py-3 text-lg curosr-pointer"
+                className="w-[200px] h-[56px] bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-3 text-lg curosr-pointer"
               >
+                BOOK ONLINE
+              </Button>
+            </Link> */}
+
+            <Link href="/booking">
+              <Button className="bg-green-500 hover:bg-green-600 text-white px-8 2xl:px-12 py-3 2xl:py-10 text-lg 2xl:text-3xl font-semibold">
                 BOOK ONLINE
               </Button>
             </Link>
@@ -71,41 +77,43 @@ export default function Home() {
       {/* Mobile Hero Section */}
       <HeroMobileSection />
       {/* Desktop Hero Section */}
-      <section className="hidden md:block relative min-h-[400px] md:h-[550px] lg:h-[570px] 2xl:h-[950px] bg-gradient-to-b from-sky-300 via-sky-400 to-blue-600">
-        <div className="w-10/12 lg:w-10/12 2xl:w-10/12 mx-auto px-4 h-full">
+      <section className="hidden md:block relative min-h-[400px] md:h-[550px] lg:h-[570px] 2xl:h-[1030px] bg-gradient-to-b from-sky-300 via-sky-400 to-blue-600">
+        <div className="container lg:w-10/12 2xl:w-10/12 mx-auto px-4 h-full">
           <div className="h-full">
             {/* Left Logos - Vertical */}
             <div className="absolute left-4 lg:left-4.5 2xl:left-8 top-1/2 -translate-y-1/2 space-y-4 lg:space-y-4.5 2xl:space-y-8 z-20">
-            <div className="p-2">
-                <img src="/images/logos/bottom-3.png" alt="Partner Logo 1" className="h-28 w-28 lg:h-30 lg:w-30 2xl:h-44 2xl:w-44 object-contain" />
+              <div>
+                <img src="/images/logos/bottom-3.png" alt="Partner Logo 1" className="h-28 w-28 lg:h-30 lg:w-30 2xl:h-72 2xl:w-72 object-contain" />
               </div>
-              <div className="p-2">
-                <img src="/images/logos/customer_satisfaction.png" alt="Partner Logo 1" className="h-28 w-28 lg:h-30 lg:w-30 2xl:h-44 2xl:w-44 object-contain" />
+              <div>
+                <img src="/images/logos/customer_satisfaction.png" alt="Partner Logo 1" className="h-28 w-28 lg:h-30 lg:w-30 2xl:h-72 2xl:w-72 object-contain" />
               </div>
-              <div className="p-2">
-                <img src="/images/logos/money_back.png" alt="Partner Logo 2" className="h-28 w-28 lg:h-30 lg:w-30 2xl:h-44 2xl:w-44 object-contain" />
-              </div>
-              <div className="p-2">
-                <img src="/images/logos/eco-friendly.png" alt="Partner Logo 3" className="h-28 w-28 lg:h-30 lg:w-30 2xl:h-44 2xl:w-44 object-contain" />
+              <div>
+                <img src="/images/logos/money_back.png" alt="Partner Logo 2" className="h-28 w-28 lg:h-30 lg:w-30 2xl:h-72 2xl:w-72 object-contain" />
               </div>
             </div>
 
             {/* Left Content */}
-            <div className="text-white space-y-6 lg:space-y-6.5 2xl:space-y-10 relative z-10 h-full flex flex-col justify-center ml-16 lg:ml-17 2xl:ml-24">
-              <h1 className="text-3xl md:text-4xl lg:text-4xl 2xl:text-7xl font-bold leading-tight text-white uppercase max-w-lg lg:max-w-xl 2xl:max-w-3xl">
+            <div className="text-white space-y-6 lg:space-y-6.5 2xl:space-y-10 relative z-10 h-full flex flex-col justify-center ml-16 lg:ml-17 2xl:ml-0">
+              <h1 className="text-3xl md:text-2xl lg:text-3xl 2xl:text-6xl font-bold leading-tight text-white uppercase max-w-lg lg:max-w-xl 2xl:max-w-2xl">
                 GreenLine, the Right <br /> Way to Clean
               </h1>
-              <p className="text-base md:text-md lg:text-base 2xl:text-3xl leading-relaxed max-w-lg lg:max-w-md 2xl:max-w-3xl text-white/90">
+              <p className="text-base md:text-md lg:text-base 2xl:text-3xl leading-relaxed max-w-lg lg:max-w-md 2xl:max-w-2xl text-white/90">
                 Refresh and renew your carpets the safe, professional way with GreenLine. We clean using our proprietary Water—no soaps or harsh chemicals. Enjoy a deep, fast-drying clean that's safe for your family and pets, and trusted by over 400,000 customers each year.
               </p>
               <Link href="/booking">
                 <Button
                   size="lg"
-                  className="w-[300px] h-[50px] lg:w-[310px] lg:h-[52px] 2xl:w-[500px] 2xl:h-[90px] bg-emerald-400 hover:bg-emerald-600 text-white font-bold px-10 py-5 lg:px-10.5 lg:py-5 2xl:px-14 2xl:py-7 text-xl lg:text-xl 2xl:text-3xl curosr-pointer"
+                  className="w-[300px] h-[50px] lg:w-[310px] lg:h-[52px] 2xl:w-[500px] 2xl:h-[90px] bg-green-500 hover:bg-green-700 text-white font-bold px-10 py-5 lg:px-10.5 lg:py-5 2xl:px-14 2xl:py-7 text-xl lg:text-xl 2xl:text-3xl curosr-pointer"
                 >
                   BOOK ONLINE
                 </Button>
               </Link>
+            </div>
+
+
+            <div className="absolute bottom-0 right-0 lg:right-[30%] 2xl:right-[30%] w-[200px] lg:w-[215px] 2xl:w-[400px] z-50">
+              <img src="/images/logos/bottom-3.png" />
             </div>
 
             <div className="absolute bottom-0 right-0 lg:right-[2%] 2xl:right-[2%] w-[200px] lg:w-[215px] 2xl:w-[400px] z-50">
@@ -113,7 +121,7 @@ export default function Home() {
             </div>
 
             {/* Right Image */}
-            <div className="absolute right-0 top-0 bottom-0 w-[50%] lg:w-[51%] 2xl:w-[60%]" style={{clipPath: 'circle(77% at 70% 50%)'}}>
+            <div className="absolute right-0 top-0 bottom-0 w-[50%] lg:w-[51%] 2xl:w-[50%]" style={{ clipPath: 'circle(77% at 70% 50%)' }}>
               <img
                 src="/images/professional-cleaner.jpg"
                 alt="Professional carpet cleaner at work"
@@ -193,7 +201,7 @@ export default function Home() {
             <Link href="/services/carpet-cleaning" className="group cursor-pointer flex flex-col h-full">
               <div className="aspect-[4/3] rounded-t-lg overflow-hidden mb-0">
                 <img
-                  src="/images/sofa.jpg"
+                  src="/images/carpet.jpg"
                   alt="Steam carpet cleaning"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -210,7 +218,7 @@ export default function Home() {
             <Link href="/services/upholstery-cleaning-and-sanitizing" className="group cursor-pointer flex flex-col h-full">
               <div className="aspect-[4/3] rounded-t-lg overflow-hidden mb-0">
                 <img
-                  src="/images/carpet.jpg"
+                  src="/images/sofa.jpg"
                   alt="Steam cleaning upholstery"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -245,19 +253,19 @@ export default function Home() {
         {/* Coupons - Right Side */}
         <div className="hidden lg:block absolute right-0 top-[20%] -translate-y-1/2 space-y-3">
           {/* Free Service Call Coupon */}
-          <div className="bg-white p-4 2xl:p-6 rounded-l-lg border-l-2 border-t-2 border-b-2 border-dashed border-red-400 w-56 2xl:w-[450px] transition-all duration-200 hover:bg-red-100 hover:border-red-500 cursor-pointer">
+          <div className="bg-white p-4 2xl:p-6 rounded-l-lg border-l-2 border-t-2 border-b-2 border-dashed border-red-600 w-56 2xl:w-[450px] transition-all duration-200 hover:bg-red-100 hover:border-red-500 cursor-pointer">
             <div className="text-left">
-              <h3 className="text-base 2xl:text-4xl font-bold text-red-400 mb-3">FREE SERVICE <br /> CALL</h3>
-              <p className="text-red-400 font-semibold mb-1 text-xs 2xl:text-2xl">FOR CARPET & UPHOLSTERY CLEANING</p>
+              <h3 className="text-base 2xl:text-4xl font-bold text-red-600 mb-3">FREE SERVICE <br /> CALL</h3>
+              <p className="text-red-600 font-semibold mb-1 text-xs 2xl:text-2xl">FOR CARPET & UPHOLSTERY CLEANING</p>
             </div>
           </div>
 
 
           {/* $29 Carpet Cleaning Coupon */}
-          <div className="bg-white p-4 2xl:p-6 rounded-l-lg border-l-2 border-t-2 border-b-2 border-dashed border-red-400 w-56 2xl:w-[450px] transition-all duration-200 hover:bg-red-100 hover:border-red-500 cursor-pointer">
+          <div className="bg-white p-4 2xl:p-6 rounded-l-lg border-l-2 border-t-2 border-b-2 border-dashed border-red-600 w-56 2xl:w-[450px] transition-all duration-200 hover:bg-red-100 hover:border-red-500 cursor-pointer">
             <div className="text-left">
-              <h3 className="text-base 2xl:text-4xl font-bold text-red-400 mb-3">GET UP TO <br />  $120 OFF</h3>
-              <p className="text-red-400 font-semibold text-xs 2xl:text-2xl">LEAVE A REQUEST <br /> RIGHT NOW!</p>
+              <h3 className="text-base 2xl:text-4xl font-bold text-red-600 mb-3">GET UP TO <br />  $120 OFF</h3>
+              <p className="text-red-600 font-semibold text-xs 2xl:text-2xl">LEAVE A REQUEST <br /> RIGHT NOW!</p>
             </div>
           </div>
         </div>
@@ -336,120 +344,120 @@ export default function Home() {
       </section>
 
       {/* Why Select Our Services Section */}
-      <section className="py-20 2xl:py-40 px-4 bg-white">
-        <div className="w-9/12 mx-auto">
-          <div className="text-center mb-16 2xl:mb-32">
-            <h2 className="text-4xl 2xl:text-6xl font-bold text-gray-900 mb-4 2xl:mb-12">
+      <section className="py-20 2xl:py-32 px-4 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-16 2xl:mb-24">
+            <h2 className="text-4xl 2xl:text-4xl font-bold text-gray-900 mb-4 2xl:mb-12">
               Why Select <span className="text-blue-500">Our Services?</span>
             </h2>
-            <div className="w-16 2xl:w-40 h-1 bg-blue-500 mx-auto"></div>
+            <div className="w-16 2xl:w-32 h-1 bg-blue-500 mx-auto"></div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 2xl:gap-5">
+          <div className="grid md:grid-cols-3 gap-8 2xl:gap-6">
             {/* Reliable & Professional Eco-Friendly Cleaning */}
-            <div className="flex flex-col items-start p-6 2xl:p-10">
-              <div className="w-20 2xl:w-40 h-20 2xl:h-40 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-12">
+            <div className="flex flex-col items-start p-6 2xl:p-8">
+              <div className="w-20 2xl:w-32 h-20 2xl:h-32 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-8">
                 <img src="/images/icons/professional_services.svg" alt="Professional services icon" className="p-2 2xl:p-3 text-white" />
               </div>
-              <h3 className="text-xl 2xl:text-4xl font-bold text-gray-900 mb-2 2xl:mb-6 text-start">Reliable & Professional Eco-Friendly Cleaning</h3>
-              <div className="w-12 2xl:w-24 h-1 bg-blue-500 mb-4 2xl:mb-12"></div>
-              <p className="text-gray-600 mb-4 2xl:mb-12 text-start text-base 2xl:text-4xl">
+              <h3 className="text-xl 2xl:text-3xl font-bold text-gray-900 mb-2 2xl:mb-6 text-start">Reliable & Professional Eco-Friendly Cleaning</h3>
+              <div className="w-12 2xl:w-20 h-1 bg-blue-500 mb-4 2xl:mb-8"></div>
+              <p className="text-gray-600 mb-4 2xl:mb-8 text-start text-base 2xl:text-3xl">
                 For reliable and professional eco-friendly cleaning, trust GreenLine.<br />Our team is dedicated to delivering perfection in every steam carpet cleaning and upholstery cleaning service — earning not just your trust, but your satisfaction.
               </p>
               <Link href="/booking">
-                <Button className="bg-blue-500 text-white px-6 2xl:px-20 py-2 2xl:py-8 rounded hover:bg-blue-600 transition-colors text-base 2xl:text-3xl">
+                <Button className="bg-blue-500 text-white px-6 2xl:px-16 py-2 2xl:py-6 rounded hover:bg-blue-600 transition-colors text-base 2xl:text-2xl">
                   SCHEDULE SERVICE
                 </Button>
               </Link>
             </div>
 
             {/* Affordable Pricing */}
-            <div className="flex flex-col items-start p-6 2xl:p-5">
-              <div className="w-20 2xl:w-40 h-20 2xl:h-40 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-12">
+            <div className="flex flex-col items-start p-6 2xl:p-8">
+              <div className="w-20 2xl:w-32 h-20 2xl:h-32 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-8">
                 <img src="/images/icons/second_icon.svg" alt="Professional services icon" className="p-2 2xl:p-3 text-white" />
               </div>
-              <h3 className="text-xl 2xl:text-4xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Affordable Pricing</h3>
-              <div className="w-12 2xl:w-24 h-1 bg-blue-500 mb-4 2xl:mb-12"></div>
-              <p className="text-gray-600 mb-4 2xl:mb-12 text-left text-base 2xl:text-4xl">
+              <h3 className="text-xl 2xl:text-3xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Affordable Pricing</h3>
+              <div className="w-12 2xl:w-20 h-1 bg-blue-500 mb-4 2xl:mb-8"></div>
+              <p className="text-gray-600 mb-4 2xl:mb-8 text-left text-base 2xl:text-3xl">
                 We offer some of the most competitive prices for eco-friendly cleaning — high quality at a great value.
               </p>
               <Link href="/booking">
-                <Button className="bg-blue-500 text-white px-6 2xl:px-20 py-2 2xl:py-8 rounded hover:bg-blue-600 transition-colors text-base 2xl:text-3xl">
+                <Button className="bg-blue-500 text-white px-6 2xl:px-16 py-2 2xl:py-6 rounded hover:bg-blue-600 transition-colors text-base 2xl:text-2xl">
                   SCHEDULE SERVICE
                 </Button>
               </Link>
             </div>
 
             {/* Eco-Friendly Steam Cleaning */}
-            <div className="flex flex-col items-start p-6 2xl:p-5">
-              <div className="w-20 2xl:w-40 h-20 2xl:h-40 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-12">
+            <div className="flex flex-col items-start p-6 2xl:p-8">
+              <div className="w-20 2xl:w-32 h-20 2xl:h-32 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-8">
                 <img src="/images/icons/third_icon.svg" alt="Professional services icon" className="p-2 2xl:p-3 text-white" />
               </div>
-              <h3 className="text-xl 2xl:text-4xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Eco-Friendly Steam Cleaning</h3>
-              <div className="w-12 2xl:w-24 h-1 bg-blue-500 mb-4 2xl:mb-12"></div>
-              <p className="text-gray-600 mb-4 2xl:mb-12 text-left text-base 2xl:text-4xl">
+              <h3 className="text-xl 2xl:text-3xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Eco-Friendly Steam Cleaning</h3>
+              <div className="w-12 2xl:w-20 h-1 bg-blue-500 mb-4 2xl:mb-8"></div>
+              <p className="text-gray-600 mb-4 2xl:mb-8 text-left text-base 2xl:text-3xl">
                 We use only safe, biodegradable, and pet-friendly products from trusted suppliers such as TMF and Chemspec. Our eco-friendly approach ensures a healthier home and care for the environment.
               </p>
               <Link href="/booking">
-                <Button className="bg-blue-500 text-white px-6 2xl:px-20 py-2 2xl:py-8 rounded hover:bg-blue-600 transition-colors text-base 2xl:text-3xl">
+                <Button className="bg-blue-500 text-white px-6 2xl:px-16 py-2 2xl:py-6 rounded hover:bg-blue-600 transition-colors text-base 2xl:text-2xl">
                   SCHEDULE SERVICE
                 </Button>
               </Link>
             </div>
 
             {/* Three-Stage Eco Cleaning */}
-            <div className="flex flex-col items-start p-6 2xl:p-5">
-              <div className="w-20 2xl:w-40 h-20 2xl:h-40 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-12">
+            <div className="flex flex-col items-start p-6 2xl:p-8">
+              <div className="w-20 2xl:w-32 h-20 2xl:h-32 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-8">
                 <img src="/images/icons/fourth_icon.svg" alt="Professional services icon" className="p-2 2xl:p-3 text-white" />
               </div>
-              <h3 className="text-xl 2xl:text-4xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Three-Stage Eco Cleaning</h3>
-              <div className="w-12 2xl:w-24 h-1 bg-blue-500 mb-4 2xl:mb-12"></div>
-              <p className="text-gray-600 mb-4 2xl:mb-12 text-left text-base 2xl:text-4xl">
+              <h3 className="text-xl 2xl:text-3xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Three-Stage Eco Cleaning</h3>
+              <div className="w-12 2xl:w-20 h-1 bg-blue-500 mb-4 2xl:mb-8"></div>
+              <p className="text-gray-600 mb-4 2xl:mb-8 text-left text-base 2xl:text-3xl">
                 Our well-structured process includes eco pre-spray treatment, alkaline steam cleaning, and chemical neutralization — delivering unmatched and long-lasting results.
               </p>
               <Link href="/booking">
-                <Button className="bg-blue-500 text-white px-6 2xl:px-20 py-2 2xl:py-8 rounded hover:bg-blue-600 transition-colors text-base 2xl:text-3xl">
+                <Button className="bg-blue-500 text-white px-6 2xl:px-16 py-2 2xl:py-6 rounded hover:bg-blue-600 transition-colors text-base 2xl:text-2xl">
                   SCHEDULE SERVICE
                 </Button>
               </Link>
             </div>
 
             {/* Fast Drying Time */}
-            <div className="flex flex-col items-start p-6 2xl:p-5">
-              <div className="w-20 2xl:w-40 h-20 2xl:h-40 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-12">
+            <div className="flex flex-col items-start p-6 2xl:p-8">
+              <div className="w-20 2xl:w-32 h-20 2xl:h-32 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-8">
                 <img src="/images/icons/fifth_icon.svg" alt="Professional services icon" className="p-2 2xl:p-3 text-white" />
               </div>
-              <h3 className="text-xl 2xl:text-4xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Fast Drying Time</h3>
-              <div className="w-12 2xl:w-24 h-1 bg-blue-500 mb-4 2xl:mb-12"></div>
-              <p className="text-gray-600 mb-4 2xl:mb-12 text-left text-base 2xl:text-4xl">
+              <h3 className="text-xl 2xl:text-3xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Fast Drying Time</h3>
+              <div className="w-12 2xl:w-20 h-1 bg-blue-500 mb-4 2xl:mb-8"></div>
+              <p className="text-gray-600 mb-4 2xl:mb-8 text-left text-base 2xl:text-3xl">
                 The eco steam cleaning method provides a quick drying time, so you can enjoy your refreshed carpets and furniture almost immediately. Drying time may vary depending on conditions.
               </p>
               <Link href="/booking">
-                <Button className="bg-blue-500 text-white px-6 2xl:px-20 py-2 2xl:py-8 rounded hover:bg-blue-600 transition-colors text-base 2xl:text-3xl">
+                <Button className="bg-blue-500 text-white px-6 2xl:px-16 py-2 2xl:py-6 rounded hover:bg-blue-600 transition-colors text-base 2xl:text-2xl">
                   SCHEDULE SERVICE
                 </Button>
               </Link>
             </div>
 
             {/* Advanced Truck Mount and Portable Equipment */}
-            <div className="flex flex-col items-start p-6 2xl:p-5">
-              <div className="w-20 2xl:w-40 h-20 2xl:h-40 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-12">
+            <div className="flex flex-col items-start p-6 2xl:p-8">
+              <div className="w-20 2xl:w-32 h-20 2xl:h-32 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-8">
                 <img src="/images/icons/sixth_icon.svg" alt="Professional services icon" className="p-2 2xl:p-3 text-white" />
               </div>
-              <h3 className="text-xl 2xl:text-4xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Advanced Truck Mount and Portable Equipment</h3>
-              <div className="w-12 2xl:w-24 h-1 bg-blue-500 mb-4 2xl:mb-12"></div>
-              <p className="text-gray-600 mb-4 2xl:mb-12 text-left text-base 2xl:text-4xl">
+              <h3 className="text-xl 2xl:text-3xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Advanced Truck Mount and Portable Equipment</h3>
+              <div className="w-12 2xl:w-20 h-1 bg-blue-500 mb-4 2xl:mb-8"></div>
+              <p className="text-gray-600 mb-4 2xl:mb-8 text-left text-base 2xl:text-3xl">
                 Powerful truck-mounted systems allow us to efficiently clean large areas. For apartments and high floors, we also have portable equipment — bringing eco-friendly steam cleaning wherever you need it.
               </p>
               <Link href="/booking">
-                <Button className="bg-blue-500 text-white px-6 2xl:px-20 py-2 2xl:py-8 rounded hover:bg-blue-600 transition-colors text-base 2xl:text-3xl">
+                <Button className="bg-blue-500 text-white px-6 2xl:px-16 py-2 2xl:py-6 rounded hover:bg-blue-600 transition-colors text-base 2xl:text-2xl">
                   SCHEDULE SERVICE
                 </Button>
               </Link>
             </div>
           </div>
         </div>
-      </section>ы
+      </section>
 
       <ReviewsCarousel />
 

@@ -90,9 +90,9 @@ export default function PortfolioPage() {
   }, []);
 
   return (
-  <div className="min-h-screen bg-white 2xl:px-16">
+    <div className="min-h-screen bg-white 2xl:px-16">
       {/* Hero Section */}
-  <section className="py-20 px-4 2xl:py-32 2xl:px-0 bg-gradient-to-r from-green-50 to-blue-50">
+      <section className="py-20 px-4 2xl:py-32 2xl:px-0 bg-gradient-to-r from-green-50 to-blue-50">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl 2xl:text-7xl font-bold text-gray-900 mb-6 2xl:mb-10">
             Our Portfolio
@@ -105,7 +105,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Filter and View Controls */}
-  <section className="py-12 px-4 2xl:py-20 2xl:px-0 bg-white border-b border-gray-100">
+      <section className="py-12 px-4 2xl:py-20 2xl:px-0 bg-white border-b border-gray-100">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 2xl:gap-8">
             {/* Category Filters */}
@@ -114,11 +114,10 @@ export default function PortfolioPage() {
                 <button
                   key={category.value}
                   onClick={() => setFilter(category.value)}
-                  className={`px-4 py-2 2xl:px-6 2xl:py-3 rounded-full text-sm 2xl:text-xl font-medium transition-all ${
-                    filter === category.value
+                  className={`px-4 py-2 2xl:px-6 2xl:py-3 rounded-full text-sm 2xl:text-xl font-medium transition-all ${filter === category.value
                       ? 'bg-green-600 text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-green-100'
-                  }`}
+                    }`}
                 >
                   {category.label}
                 </button>
@@ -131,21 +130,19 @@ export default function PortfolioPage() {
               <div className="flex border border-gray-200 rounded-lg overflow-hidden">
                 <button
                   onClick={() => setViewMode('masonry')}
-                  className={`px-3 py-2 2xl:px-5 2xl:py-3 text-sm 2xl:text-xl ${
-                    viewMode === 'masonry'
+                  className={`px-3 py-2 2xl:px-5 2xl:py-3 text-sm 2xl:text-xl ${viewMode === 'masonry'
                       ? 'bg-green-600 text-white'
                       : 'bg-white text-gray-700 hover:bg-gray-50'
-                  }`}
+                    }`}
                 >
                   <Grid className="w-4 h-4 2xl:w-6 2xl:h-6" />
                 </button>
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`px-3 py-2 2xl:px-5 2xl:py-3 text-sm 2xl:text-xl ${
-                    viewMode === 'grid'
+                  className={`px-3 py-2 2xl:px-5 2xl:py-3 text-sm 2xl:text-xl ${viewMode === 'grid'
                       ? 'bg-green-600 text-white'
                       : 'bg-white text-gray-700 hover:bg-gray-50'
-                  }`}
+                    }`}
                 >
                   <List className="w-4 h-4 2xl:w-6 2xl:h-6" />
                 </button>
@@ -157,7 +154,7 @@ export default function PortfolioPage() {
             <span className="text-sm 2xl:text-xl">Showing {filteredVideos.length} project{filteredVideos.length !== 1 ? 's' : ''}</span>
           </div>
         </div>
-        
+
       </section>
 
       {/* Portfolio Grid */}
