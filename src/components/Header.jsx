@@ -42,11 +42,11 @@ const Header = () => {
   ];
 
 const InfoItem = ({ icon, title, subtitle, href }) => (
-  <div className="flex items-center space-x-3 2xl:space-x-4">
+  <div className="flex items-center space-x-3 2xl:space-x-3">
     <div className="text-sky-400">{icon}</div>
     <div>
       {/* title — просто текст */}
-      <p className="text-sm 2xl:text-2xl text-gray-600 font-medium">
+      <p className="text-sm 2xl:text-xl text-gray-600 font-medium">
         {title}
       </p>
 
@@ -54,12 +54,12 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
       {href ? (
         <a
           href={href}
-          className="font-bold text-gray-800 2xl:text-3xl hover:text-blue-500 transition-colors whitespace-nowrap"
+          className="font-bold text-gray-800 2xl:text-2xl hover:text-blue-500 transition-colors whitespace-nowrap"
           dangerouslySetInnerHTML={{ __html: subtitle }}
         />
       ) : (
         <p
-          className="font-bold text-gray-800 2xl:text-3xl whitespace-nowrap"
+          className="font-bold text-gray-800 2xl:text-2xl whitespace-nowrap"
           dangerouslySetInnerHTML={{ __html: subtitle }}
         />
       )}
@@ -72,17 +72,17 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
     <div className="relative">
       {item.hasDropdown ? (
         <DropdownMenu>
-          <DropdownMenuTrigger className="flex items-center space-x-1 text-white hover:text-blue-200 font-medium text-lg 2xl:text-3xl transition-colors py-2 focus:outline-none">
+          <DropdownMenuTrigger className="flex items-center space-x-1 text-white hover:text-blue-200 font-medium text-xl 2xl:text-3xl transition-colors py-2 focus:outline-none">
             <span>{item.name}</span>
             <CaretDown className="h-4 w-4" weight="fill" />
           </DropdownMenuTrigger>
-          <DropdownMenuContent align="center" className="w-64 2xl:w-[400px] bg-white border-gray-200 shadow-xl">
+          <DropdownMenuContent align="center" className="w-64 2xl:w-96 bg-white border-gray-200 shadow-xl">
             <div className="py-2">
               {services.map((service) => (
                 <DropdownMenuItem key={service.name} asChild>
                   <Link
                     href={service.href}
-                    className="flex items-center px-4 py-3 text-base 2xl:text-3xl text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
+                    className="flex items-center px-4 py-3 text-base 2xl:text-xl text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -94,7 +94,7 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
       ) : (
         <Link
           href={item.href}
-          className="text-white hover:text-blue-200 font-medium text-xl 2xl:text-4xl transition-colors py-2"
+          className="text-white hover:text-blue-200 font-medium text-xl 2xl:text-3xl transition-colors py-2"
         >
           {item.name}
         </Link>
@@ -111,17 +111,17 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
       {/* Top Section - White Bar */}
       <div className="bg-white">
         <div className="w-full mx-auto px-4 hidden lg:block">
-          <div className="flex items-center h-24 2xl:h-40">
+          <div className="flex items-center h-28 2xl:h-40">
             <div className="flex-1 flex items-center justify-end space-x-6">
               <InfoItem
-                icon={<Phone size={32} className="2xl:w-18 2xl:h-18" weight="fill" />}
+                icon={<Phone size={32} className="2xl:w-14 2xl:h-14" weight="fill" />}
                 title="Call For Help"
                 subtitle="+1 720-462-8866"
                 href="tel:+17204628866"
               />
               <div className="h-10 border-r border-gray-300"></div>
               <InfoItem
-                icon={<Clock size={32} className="2xl:w-18 2xl:h-18" weight="fill" />}
+                icon={<Clock size={32} className="2xl:w-14 2xl:h-14" weight="fill" />}
                 title="Monday-Saturday"
                 subtitle="9am - 9pm"
               />
@@ -132,7 +132,7 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
 
             <div className="flex-1 flex items-center justify-start space-x-6">
               <InfoItem
-                icon={<Envelope size={32} className="2xl:w-18 2xl:h-18" weight="fill" />}
+                icon={<Envelope size={32} className="2xl:w-14 2xl:h-14" weight="fill" />}
                 title="Mail to us"
                 subtitle="greenlinecarpetco@gmail.com"
                 href="mailto:greenlinecarpetco@gmail.com"
@@ -141,7 +141,7 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
               <InfoItem
                 icon={
                   <div className="flex items-center space-x-2">
-                    <MapPin size={32} className="2xl:w-18 2xl:h-18" weight="fill" />
+                    <MapPin size={32} className="2xl:w-14 2xl:h-14" weight="fill" />
                   </div>
                 }
                 title="Address"
@@ -153,7 +153,7 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
       </div>
 
       {/* Overlapping Logo */}
-      <div className="hidden lg:block absolute top-6 left-1/2 -translate-x-1/2 z-20">
+      <div className="hidden lg:block absolute top-8 2xl:top-12 left-1/2 -translate-x-1/2 z-20">
         <Link href="/">
           <div className="bg-white rounded-full p-4 2xl:p-6 shadow-lg border-4 2xl:border-6 border-white">
             <img src="/images/logo.png" alt="GreenLine logo" className="h-32 w-32 2xl:h-52 2xl:w-52" />
@@ -168,11 +168,11 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
       <div className="bg-sky-300" >
         <div className="container mx-auto px-4">
           {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center h-16 2xl:h-28">
-            <div className="flex-1 flex items-center justify-end space-x-20 2xl:space-x-32">
+            <nav className="hidden lg:flex items-center h-16 2xl:h-24">
+            <div className="flex-1 flex items-center justify-end space-x-20 2xl:space-x-28">
                 {navLeft.map((item) => <NavLink key={item.name} item={item} />)}
             </div>
-              <div className="w-48 2xl:w-72 flex-shrink-0"></div>
+              <div className="w-48 2xl:w-68 flex-shrink-0"></div>
             <div className="flex-1 flex items-center justify-start space-x-20 2xl:space-x-28">
                 {navRight.map((item) => <NavLink key={item.name} item={item} />)}
             </div>

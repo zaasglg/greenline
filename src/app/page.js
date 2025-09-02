@@ -113,7 +113,7 @@ export default function Home() {
 
 
             <div className="absolute bottom-0 right-0 lg:right-[30%] 2xl:right-[30%] w-[200px] lg:w-[215px] 2xl:w-[400px] z-50">
-              <img src="/images/logos/bottom-3.png" />
+              <img src="/images/logos/eco-friendly.png" />
             </div>
 
             <div className="absolute bottom-0 right-0 lg:right-[2%] 2xl:right-[2%] w-[200px] lg:w-[215px] 2xl:w-[400px] z-50">

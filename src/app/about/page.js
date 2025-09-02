@@ -94,7 +94,7 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left Content - Image */}
               <div className="relative">
-                <div className="aspect-[4/3] rounded-2xl relative overflow-hidden" style={{backgroundImage: "url('/images/XXL.webp')", backgroundSize: "cover", backgroundPosition: "center"}}>
+                <div className="aspect-[4/3] rounded-2xl relative overflow-hidden" style={{backgroundImage: "url('/images/professional-cleaner.webp')", backgroundSize: "cover", backgroundPosition: "center"}}>
                 </div>
               </div>
 
@@ -134,37 +134,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Mission Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-        <div className="container mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
-            <div className="mb-8">
-              <Sparkles className="w-16 h-16 text-white mx-auto mb-6 opacity-90" />
-              <h2 className="text-4xl font-bold mb-6">Our Mission</h2>
-              <div className="w-16 h-1 bg-white/30 mx-auto mb-8"></div>
-            </div>
-
-            <p className="text-xl leading-relaxed mb-8 opacity-95">
-              Our mission is to create an atmosphere of comfort and cleanliness in your home using the best eco-friendly solutions. We want every cleaning service to bring not only the joy of cleanliness but also the peace of mind that your health and comfort are in good hands.
-            </p>
-
-            <p className="text-lg leading-relaxed opacity-90">
-              Our business is built on trust, attention to detail, and a commitment to excellence in every aspect of our work.
-            </p>
-
-            <div className="mt-12">
-              <Link
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-green-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-lg"
-              >
-                Get Started Today
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
     </div>
   );
 }

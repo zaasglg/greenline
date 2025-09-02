@@ -49,7 +49,7 @@ export default function ContactPage() {
         <div className="container mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+            <div className="bg-white p-8 rounded-2xl border border-gray-100">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Get a Free Quote</h2>
               <div className="w-16 h-1 bg-green-500 mb-8"></div>
 
@@ -120,14 +120,17 @@ export default function ContactPage() {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
+                      className="appearance-none w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all"
                     >
                       <option value="">Select a service</option>
-                      <option value="carpet">Carpet Cleaning</option>
-                      <option value="upholstery">Upholstery Cleaning</option>
-                      <option value="office">Office Cleaning</option>
-                      <option value="vehicle">Vehicle Cleaning</option>
-                      <option value="deep">Deep Cleaning</option>
+                      <option value="carpet-cleaning">CARPET CLEANING</option>
+                      <option value="rug-cleaning">Rug Cleaning</option>
+                      <option value="professional-upholstery-cleaning">Professional Upholstery Cleaning</option>
+                      <option value="carpet-sanitizer">Carpet Sanitizer</option>
+                      <option value="upholstery-cleaning-and-sanitizing">Upholstery Cleaning and Sanitizing</option>
+                      <option value="covid-19">COVID-19</option>
+                      <option value="mattress-cleaning">Mattress Cleaning</option>
+                      <option value="pet-carpet-cleaning">Pet Carpet Cleaning</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -206,8 +209,8 @@ export default function ContactPage() {
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>
                     <p className="text-gray-600 mb-2">Office Address</p>
                     <p className="text-gray-700">
-                      123 Main Street<br />
-                      Your City, State 12345<br />
+                      9855 E Louisiana dr<br />
+                      Aurora Colorado 80247<br />
                       United States
                     </p>
                   </div>
@@ -220,7 +223,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Business Hours</h3>
                     <div className="text-gray-700 space-y-1">
-                      <p>Monday - Sunday: 8:00 AM - 10:00 PM</p>
+                      <p>Monday-Saturday: 9am - 9pm</p>
                     </div>
                     <p className="text-sm text-gray-500 mt-2">Emergency services available 24/7</p>
                   </div>
