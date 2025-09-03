@@ -74,17 +74,17 @@ export default function ReviewsCarousel() {
 
   return (
     <section className="py-20 2xl:py-32 px-4 bg-white">
-      <div className="w-8/12 2xl:w-10/12 mx-auto">
+      <div className="container mx-auto">
         <div className="text-center mb-16 2xl:mb-24">
           <div className="flex justify-center items-center space-x-1 mb-6 2xl:mb-8">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-8 h-8 2xl:w-12 2xl:h-12 fill-orange-400 text-orange-400" />
             ))}
           </div>
-          <h2 className="text-4xl 2xl:text-8xl font-bold text-slate-900 mb-6 2xl:mb-8">
+          <h2 className="text-4xl 2xl:text-6xl font-bold text-slate-900 mb-6 2xl:mb-8">
             Our Reviews
           </h2>
-          <p className="text-lg 2xl:text-3xl text-slate-600 max-w-4xl mx-auto">
+          <p className="text-lg 2xl:text-2xl text-slate-600 max-w-4xl mx-auto">
             We love our customers, and they love us back as 90% of our customers would refer GreenLine Cleaning to a friend.
           </p>
         </div>

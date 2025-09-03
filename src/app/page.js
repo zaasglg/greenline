@@ -188,10 +188,10 @@ export default function Home() {
       <section className="py-16 px-4 bg-white relative">
         <div className="w-10/12 mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl 2xl:text-7xl font-bold text-blue-950 mb-4">
+            <h2 className="text-3xl md:text-4xl 2xl:text-4xl font-bold text-blue-950 mb-6">
               Cleaning Surfaces That Matter Most
             </h2>
-            <p className="text-slate-600 max-w-4xl lg:max-w-4xl 2xl:max-w-7xl mx-auto text-lg 2xl:text-2xl">
+            <p className="text-slate-600 max-w-4xl lg:max-w-4xl 2xl:max-w-5xl mx-auto text-lg 2xl:text-2xl">
               You deserve more than just clean carpets! Keep you and your family healthier by trusting us to expertly remove dirt and grime from living spaces and surfaces throughout your home with our non-toxic proprietary Water, which is free of dirt-attracting soaps, detergents, and fragrances.
             </p>
           </div>
@@ -207,7 +207,7 @@ export default function Home() {
                 />
               </div>
               <div className="bg-sky-400 group-hover:bg-sky-600 text-white p-4 2xl:p-8 rounded-b-lg flex-1 flex items-center transition-colors duration-300">
-                <h3 className="text-lg 2xl:text-3xl font-medium flex items-center justify-between w-full">
+                <h3 className="text-lg 2xl:text-2xl font-medium flex items-center justify-between w-full">
                   Steam Carpet Cleaning
                   <ChevronRight className="w-5 h-5 2xl:w-8 2xl:h-8" />
                 </h3>
@@ -224,7 +224,7 @@ export default function Home() {
                 />
               </div>
               <div className="bg-sky-400 group-hover:bg-sky-600 text-white p-4 2xl:p-8 rounded-b-lg flex-1 flex items-center transition-colors duration-300">
-                <h3 className="text-lg 2xl:text-3xl leading-8 font-medium flex items-center justify-between w-full">
+                <h3 className="text-lg 2xl:text-2xl leading-8 font-medium flex items-center justify-between w-full">
                   Steam Cleaning Upholstery
                   <ChevronRight className="w-5 h-5 2xl:w-8 2xl:h-8" />
                 </h3>
@@ -255,8 +255,8 @@ export default function Home() {
           {/* Free Service Call Coupon */}
           <div className="bg-white p-4 2xl:p-6 rounded-l-lg border-l-2 border-t-2 border-b-2 border-dashed border-red-600 w-56 2xl:w-[450px] transition-all duration-200 hover:bg-red-100 hover:border-red-500 cursor-pointer">
             <div className="text-left">
-              <h3 className="text-base 2xl:text-4xl font-bold text-red-600 mb-3">FREE SERVICE <br /> CALL</h3>
-              <p className="text-red-600 font-semibold mb-1 text-xs 2xl:text-2xl">FOR CARPET & UPHOLSTERY CLEANING</p>
+              <h3 className="text-base 2xl:text-2xl font-bold text-red-600 mb-3">FREE SERVICE CALL</h3>
+              <p className="text-red-600 font-semibold mb-1 text-xs 2xl:text-xl">FOR CARPET & UPHOLSTERY CLEANING</p>
             </div>
           </div>
 
@@ -264,8 +264,8 @@ export default function Home() {
           {/* $29 Carpet Cleaning Coupon */}
           <div className="bg-white p-4 2xl:p-6 rounded-l-lg border-l-2 border-t-2 border-b-2 border-dashed border-red-600 w-56 2xl:w-[450px] transition-all duration-200 hover:bg-red-100 hover:border-red-500 cursor-pointer">
             <div className="text-left">
-              <h3 className="text-base 2xl:text-4xl font-bold text-red-600 mb-3">GET UP TO <br />  $120 OFF</h3>
-              <p className="text-red-600 font-semibold text-xs 2xl:text-2xl">LEAVE A REQUEST <br /> RIGHT NOW!</p>
+              <h3 className="text-base 2xl:text-2xl font-bold text-red-600 mb-3">GET UP TO $120 OFF</h3>
+              <p className="text-red-600 font-semibold text-xs 2xl:text-xl">LEAVE A REQUEST <br /> RIGHT NOW!</p>
             </div>
           </div>
         </div>
@@ -286,23 +286,23 @@ export default function Home() {
 
             {/* Right Content */}
             <div className="space-y-6 2xl:space-y-8">
-              <h2 className="text-4xl 2xl:text-6xl font-bold text-blue-950">
+              <h2 className="text-3xl 2xl:text-4xl font-bold text-blue-950">
                 GreenLine: Experts in the Science of Clean
               </h2>
 
-              <p className="text-xl 2xl:text-3xl font-semibold text-green-700">
+              <p className="text-xl 2xl:text-2xl font-semibold text-green-700">
                 Eco-friendly people and technology you can trust.
               </p>
 
-              <p className="text-gray-600 leading-relaxed text-base 2xl:text-3xl">
+              <p className="text-gray-600 leading-relaxed text-base 2xl:text-2xl">
                 Our GreenLine specialists use advanced steam cleaning technology to deliver a deeper, more thorough clean that lasts longer.
               </p>
 
-              <p className="text-gray-600 leading-relaxed text-base 2xl:text-3xl">
+              <p className="text-gray-600 leading-relaxed text-base 2xl:text-2xl">
                 Our proprietary Water technology cleans without harsh chemicals, soaps, or detergents. This eco-friendly approach removes dirt and grime while being safe for your family, pets, and the environment. Your carpets stay cleaner longer without toxic residue.
               </p>
 
-              <p className="text-green-700 font-medium text-base 2xl:text-3xl">
+              <p className="text-green-700 font-medium text-base 2xl:text-2xl">
                 See what our satisfied customers say!
               </p>
 
@@ -334,7 +334,7 @@ export default function Home() {
               </div>
 
               <Link href="/booking">
-                <Button className="bg-green-500 hover:bg-green-600 text-white px-8 2xl:px-12 py-3 2xl:py-10 text-lg 2xl:text-3xl font-semibold">
+                <Button className="bg-green-500 hover:bg-green-600 text-white px-8 2xl:px-12 py-3 2xl:py-10 text-lg 2xl:text-2xl font-semibold">
                   SCHEDULE SERVICE
                 </Button>
               </Link>
@@ -347,7 +347,7 @@ export default function Home() {
       <section className="py-20 2xl:py-32 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-16 2xl:mb-24">
-            <h2 className="text-4xl 2xl:text-4xl font-bold text-gray-900 mb-4 2xl:mb-12">
+            <h2 className="text-3xl 2xl:text-3xl font-bold text-gray-900 mb-4 2xl:mb-12">
               Why Select <span className="text-blue-500">Our Services?</span>
             </h2>
             <div className="w-16 2xl:w-32 h-1 bg-blue-500 mx-auto"></div>
@@ -359,9 +359,9 @@ export default function Home() {
               <div className="w-20 2xl:w-32 h-20 2xl:h-32 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-8">
                 <img src="/images/icons/professional_services.svg" alt="Professional services icon" className="p-2 2xl:p-3 text-white" />
               </div>
-              <h3 className="text-xl 2xl:text-3xl font-bold text-gray-900 mb-2 2xl:mb-6 text-start">Reliable & Professional Eco-Friendly Cleaning</h3>
+              <h3 className="text-xl 2xl:text-2xl font-bold text-gray-900 mb-2 2xl:mb-6 text-start">Reliable & Professional Eco-Friendly Cleaning</h3>
               <div className="w-12 2xl:w-20 h-1 bg-blue-500 mb-4 2xl:mb-8"></div>
-              <p className="text-gray-600 mb-4 2xl:mb-8 text-start text-base 2xl:text-3xl">
+              <p className="text-gray-600 mb-4 2xl:mb-8 text-start text-base 2xl:text-2xl">
                 For reliable and professional eco-friendly cleaning, trust GreenLine.<br />Our team is dedicated to delivering perfection in every steam carpet cleaning and upholstery cleaning service — earning not just your trust, but your satisfaction.
               </p>
               <Link href="/booking">
@@ -376,9 +376,9 @@ export default function Home() {
               <div className="w-20 2xl:w-32 h-20 2xl:h-32 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-8">
                 <img src="/images/icons/second_icon.svg" alt="Professional services icon" className="p-2 2xl:p-3 text-white" />
               </div>
-              <h3 className="text-xl 2xl:text-3xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Affordable Pricing</h3>
+              <h3 className="text-xl 2xl:text-2xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Affordable Pricing</h3>
               <div className="w-12 2xl:w-20 h-1 bg-blue-500 mb-4 2xl:mb-8"></div>
-              <p className="text-gray-600 mb-4 2xl:mb-8 text-left text-base 2xl:text-3xl">
+              <p className="text-gray-600 mb-4 2xl:mb-8 text-left text-base 2xl:text-2xl">
                 We offer some of the most competitive prices for eco-friendly cleaning — high quality at a great value.
               </p>
               <Link href="/booking">
@@ -393,9 +393,9 @@ export default function Home() {
               <div className="w-20 2xl:w-32 h-20 2xl:h-32 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-8">
                 <img src="/images/icons/third_icon.svg" alt="Professional services icon" className="p-2 2xl:p-3 text-white" />
               </div>
-              <h3 className="text-xl 2xl:text-3xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Eco-Friendly Steam Cleaning</h3>
+              <h3 className="text-xl 2xl:text-2xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Eco-Friendly Steam Cleaning</h3>
               <div className="w-12 2xl:w-20 h-1 bg-blue-500 mb-4 2xl:mb-8"></div>
-              <p className="text-gray-600 mb-4 2xl:mb-8 text-left text-base 2xl:text-3xl">
+              <p className="text-gray-600 mb-4 2xl:mb-8 text-left text-base 2xl:text-2xl">
                 We use only safe, biodegradable, and pet-friendly products from trusted suppliers such as TMF and Chemspec. Our eco-friendly approach ensures a healthier home and care for the environment.
               </p>
               <Link href="/booking">
@@ -410,9 +410,9 @@ export default function Home() {
               <div className="w-20 2xl:w-32 h-20 2xl:h-32 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-8">
                 <img src="/images/icons/fourth_icon.svg" alt="Professional services icon" className="p-2 2xl:p-3 text-white" />
               </div>
-              <h3 className="text-xl 2xl:text-3xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Three-Stage Eco Cleaning</h3>
+              <h3 className="text-xl 2xl:text-2xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Three-Stage Eco Cleaning</h3>
               <div className="w-12 2xl:w-20 h-1 bg-blue-500 mb-4 2xl:mb-8"></div>
-              <p className="text-gray-600 mb-4 2xl:mb-8 text-left text-base 2xl:text-3xl">
+              <p className="text-gray-600 mb-4 2xl:mb-8 text-left text-base 2xl:text-2xl">
                 Our well-structured process includes eco pre-spray treatment, alkaline steam cleaning, and chemical neutralization — delivering unmatched and long-lasting results.
               </p>
               <Link href="/booking">
@@ -427,9 +427,9 @@ export default function Home() {
               <div className="w-20 2xl:w-32 h-20 2xl:h-32 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-8">
                 <img src="/images/icons/fifth_icon.svg" alt="Professional services icon" className="p-2 2xl:p-3 text-white" />
               </div>
-              <h3 className="text-xl 2xl:text-3xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Fast Drying Time</h3>
+              <h3 className="text-xl 2xl:text-2xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Fast Drying Time</h3>
               <div className="w-12 2xl:w-20 h-1 bg-blue-500 mb-4 2xl:mb-8"></div>
-              <p className="text-gray-600 mb-4 2xl:mb-8 text-left text-base 2xl:text-3xl">
+              <p className="text-gray-600 mb-4 2xl:mb-8 text-left text-base 2xl:text-2xl">
                 The eco steam cleaning method provides a quick drying time, so you can enjoy your refreshed carpets and furniture almost immediately. Drying time may vary depending on conditions.
               </p>
               <Link href="/booking">
@@ -444,9 +444,9 @@ export default function Home() {
               <div className="w-20 2xl:w-32 h-20 2xl:h-32 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-8">
                 <img src="/images/icons/sixth_icon.svg" alt="Professional services icon" className="p-2 2xl:p-3 text-white" />
               </div>
-              <h3 className="text-xl 2xl:text-3xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Advanced Truck Mount and Portable Equipment</h3>
+              <h3 className="text-xl 2xl:text-2xl font-bold text-gray-900 mb-2 2xl:mb-6 text-left">Advanced Truck Mount and Portable Equipment</h3>
               <div className="w-12 2xl:w-20 h-1 bg-blue-500 mb-4 2xl:mb-8"></div>
-              <p className="text-gray-600 mb-4 2xl:mb-8 text-left text-base 2xl:text-3xl">
+              <p className="text-gray-600 mb-4 2xl:mb-8 text-left text-base 2xl:text-2xl">
                 Powerful truck-mounted systems allow us to efficiently clean large areas. For apartments and high floors, we also have portable equipment — bringing eco-friendly steam cleaning wherever you need it.
               </p>
               <Link href="/booking">

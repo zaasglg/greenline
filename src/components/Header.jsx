@@ -72,7 +72,7 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
     <div className="relative">
       {item.hasDropdown ? (
         <DropdownMenu>
-          <DropdownMenuTrigger className="flex items-center space-x-1 text-white hover:text-blue-200 font-medium text-xl 2xl:text-3xl transition-colors py-2 focus:outline-none">
+          <DropdownMenuTrigger className="flex items-center space-x-1 text-white hover:text-blue-200 font-medium text-xl 2xl:text-2xl transition-colors py-2 focus:outline-none">
             <span>{item.name}</span>
             <CaretDown className="h-4 w-4" weight="fill" />
           </DropdownMenuTrigger>
@@ -94,7 +94,7 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
       ) : (
         <Link
           href={item.href}
-          className="text-white hover:text-blue-200 font-medium text-xl 2xl:text-3xl transition-colors py-2"
+          className="text-white hover:text-blue-200 font-medium text-xl 2xl:text-2xl transition-colors py-2"
         >
           {item.name}
         </Link>
@@ -114,14 +114,14 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
           <div className="flex items-center h-28 2xl:h-40">
             <div className="flex-1 flex items-center justify-end space-x-6">
               <InfoItem
-                icon={<Phone size={32} className="2xl:w-14 2xl:h-14" weight="fill" />}
+                icon={<Phone size={32} className="2xl:w-12 2xl:h-12" weight="fill" />}
                 title="Call For Help"
                 subtitle="+1 720-462-8866"
                 href="tel:+17204628866"
               />
               <div className="h-10 border-r border-gray-300"></div>
               <InfoItem
-                icon={<Clock size={32} className="2xl:w-14 2xl:h-14" weight="fill" />}
+                icon={<Clock size={32} className="2xl:w-12 2xl:h-12" weight="fill" />}
                 title="Monday-Saturday"
                 subtitle="9am - 9pm"
               />
@@ -132,7 +132,7 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
 
             <div className="flex-1 flex items-center justify-start space-x-6">
               <InfoItem
-                icon={<Envelope size={32} className="2xl:w-14 2xl:h-14" weight="fill" />}
+                icon={<Envelope size={32} className="2xl:w-12 2xl:h-12" weight="fill" />}
                 title="Mail to us"
                 subtitle="greenlinecarpetco@gmail.com"
                 href="mailto:greenlinecarpetco@gmail.com"
@@ -141,7 +141,7 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
               <InfoItem
                 icon={
                   <div className="flex items-center space-x-2">
-                    <MapPin size={32} className="2xl:w-14 2xl:h-14" weight="fill" />
+                    <MapPin size={32} className="2xl:w-12 2xl:h-12" weight="fill" />
                   </div>
                 }
                 title="Address"
@@ -172,7 +172,7 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
             <div className="flex-1 flex items-center justify-end space-x-20 2xl:space-x-28">
                 {navLeft.map((item) => <NavLink key={item.name} item={item} />)}
             </div>
-              <div className="w-48 2xl:w-68 flex-shrink-0"></div>
+            <div className="w-48 2xl:w-68 flex-shrink-0"></div>
             <div className="flex-1 flex items-center justify-start space-x-20 2xl:space-x-28">
                 {navRight.map((item) => <NavLink key={item.name} item={item} />)}
             </div>
