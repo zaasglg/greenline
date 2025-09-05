@@ -81,7 +81,7 @@ export default function ReviewsCarousel() {
               <Star key={i} className="w-8 h-8 2xl:w-12 2xl:h-12 fill-orange-400 text-orange-400" />
             ))}
           </div>
-          <h2 className="text-4xl 2xl:text-6xl font-bold text-slate-900 mb-6 2xl:mb-8">
+          <h2 className="text-4xl 2xl:text-5xl font-bold text-slate-900 mb-6 2xl:mb-8">
             Our Reviews
           </h2>
           <p className="text-lg 2xl:text-2xl text-slate-600 max-w-4xl mx-auto">

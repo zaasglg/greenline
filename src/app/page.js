@@ -20,18 +20,9 @@ function HeroMobileSection() {
             Refresh and renew your carpets the safe, professional way with GreenLine. We clean using our proprietary Water—no soaps or harsh chemicals. Enjoy a deep, fast-drying clean that's safe for your family and pets, and trusted by over 400,000 customers each year.
           </p>
           <div className="flex flex-row items-center justify-center space-x-6 mb-8">
-            {/* <Link href="/booking">
-              <Button
-                size="lg"
-                className="w-[200px] h-[56px] bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-3 text-lg curosr-pointer"
-              >
-                BOOK ONLINE
-              </Button>
-            </Link> */}
-
             <Link href="/booking">
               <Button className="bg-green-500 hover:bg-green-600 text-white px-8 2xl:px-12 py-3 2xl:py-10 text-lg 2xl:text-3xl font-semibold">
-                BOOK ONLINE
+                SCHEDULE SERVICE
               </Button>
             </Link>
             <img src="/images/logos/furgon.png" className="h-16 w-auto" />
@@ -62,6 +53,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Leaf, Target, Users, Award, Phone, ClipboardList, Sparkles, ShieldCheck, Heart, Star, Quote } from "lucide-react";
 import { ChevronRight } from "lucide-react";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
@@ -106,13 +98,13 @@ export default function Home() {
                   size="lg"
                   className="w-[300px] h-[50px] lg:w-[310px] lg:h-[52px] 2xl:w-[500px] 2xl:h-[90px] bg-green-500 hover:bg-green-700 text-white font-bold px-10 py-5 lg:px-10.5 lg:py-5 2xl:px-14 2xl:py-7 text-xl lg:text-xl 2xl:text-3xl curosr-pointer"
                 >
-                  BOOK ONLINE
+                  SCHEDULE SERVICE
                 </Button>
               </Link>
             </div>
 
 
-            <div className="absolute bottom-0 right-0 lg:right-[30%] 2xl:right-[30%] w-[200px] lg:w-[215px] 2xl:w-[400px] z-50">
+            <div className="absolute bottom-0 right-0 lg:right-[50%] 2xl:right-[50%] w-[200px] lg:w-[215px] 2xl:w-[400px] z-50">
               <img src="/images/logos/eco-friendly.png" />
             </div>
 
@@ -250,6 +242,30 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="hidden lg:block absolute left-0 top-[10%]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3070.088285445207!2d-104.8741227!3d39.69271889999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x44055d02d7065a9b%3A0xf71240a02f337470!2sGreen%20Line%20Carpet%20Cleaning!5e0!3m2!1sen!2skz!4v1757015508665!5m2!1sen!2skz"
+            width="600"
+            height="450"
+            style={{border: '0'}}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="w-56 2xl:w-[450px] shadow-2xl rounded-lg"
+          ></iframe>
+
+          <div className="mt-7 text-center">
+            <a
+              href="https://www.google.com/maps/place/Green+Line+Carpet+Cleaning/@39.6927189,-104.8741227,17z/data=!3m1!4b1!4m6!3m5!1s0x44055d02d7065a9b:0xf71240a02f337470!8m2!3d39.6927189!4d-104.8741227!16s%2Fg%2F11lnfk3hhw?entry=ttu&g_ep=EgoyMDI1MDgzMC4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-4 2xl:px-12 2xl:py-6 rounded-lg font-semibold text-xl 2xl:text-2xl transition-colors duration-300 shadow-lg hover:shadow-xl"
+            >
+              Google Maps Reviews
+            </a>
+          </div>
+        </div>
+
         {/* Coupons - Right Side */}
         <div className="hidden lg:block absolute right-0 top-[20%] -translate-y-1/2 space-y-3">
           {/* Free Service Call Coupon */}
@@ -353,7 +369,7 @@ export default function Home() {
             <div className="w-16 2xl:w-32 h-1 bg-blue-500 mx-auto"></div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 2xl:gap-6">
+          <div className="grid md:grid-cols-3 gap-8 2xl:gap-4">
             {/* Reliable & Professional Eco-Friendly Cleaning */}
             <div className="flex flex-col items-start p-6 2xl:p-8">
               <div className="w-20 2xl:w-32 h-20 2xl:h-32 bg-blue-500 rounded-full flex items-start justify-start mb-4 2xl:mb-8">
@@ -454,6 +470,107 @@ export default function Home() {
                   SCHEDULE SERVICE
                 </Button>
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5 Simple Steps to a Perfect Clean */}
+      <section className="py-20 2xl:py-32 px-4 bg-gray-50">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 2xl:gap-20 items-center">
+            {/* Left Content */}
+            <div className="space-y-6 2xl:space-y-8">
+              <h2 className="text-3xl 2xl:text-4xl font-bold text-blue-950">
+                5 Simple Steps to a Perfect Clean:
+              </h2>
+
+              <Accordion type="single" collapsible className="w-full space-y-4 2xl:space-y-6">
+                <AccordionItem value="step-1" className="border border-gray-200 rounded-lg px-4 2xl:px-6">
+                  <AccordionTrigger className="text-xl 2xl:text-2xl font-semibold text-gray-900 hover:text-green-600 py-4 2xl:py-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-8 h-8 2xl:w-10 2xl:h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold text-lg 2xl:text-xl">1</span>
+                      </div>
+                      <span>Contact Us</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600 text-base 2xl:text-xl leading-relaxed pb-4 2xl:pb-6 pl-12 2xl:pl-14">
+                    Submit a request online or give us a call – it only takes a few minutes. We'll respond quickly and start the process of bringing cleanliness to your home.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="step-2" className="border border-gray-200 rounded-lg px-4 2xl:px-6">
+                  <AccordionTrigger className="text-xl 2xl:text-2xl font-semibold text-gray-900 hover:text-green-600 py-4 2xl:py-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-8 h-8 2xl:w-10 2xl:h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold text-lg 2xl:text-xl">2</span>
+                      </div>
+                      <span>Personalized Cleaning Plan</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600 text-base 2xl:text-xl leading-relaxed pb-4 2xl:pb-6 pl-12 2xl:pl-14">
+                    We'll discuss your needs and offer a tailored cleaning plan, ensuring you get exactly the results you're looking for.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="step-3" className="border border-gray-200 rounded-lg px-4 2xl:px-6">
+                  <AccordionTrigger className="text-xl 2xl:text-2xl font-semibold text-gray-900 hover:text-green-600 py-4 2xl:py-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-8 h-8 2xl:w-10 2xl:h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold text-lg 2xl:text-xl">3</span>
+                      </div>
+                      <span>Quick and Easy Preparation</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600 text-base 2xl:text-xl leading-relaxed pb-4 2xl:pb-6 pl-12 2xl:pl-14">
+                    Before our arrival, we'll guide you on how to prepare the area for efficient cleaning. It only takes a few minutes, and you'll be ready for a spotless clean.
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="step-4" className="border border-gray-200 rounded-lg px-4 2xl:px-6">
+                  <AccordionTrigger className="text-xl 2xl:text-2xl font-semibold text-gray-900 hover:text-green-600 py-4 2xl:py-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-8 h-8 2xl:w-10 2xl:h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold text-lg 2xl:text-xl">4</span>
+                      </div>
+                      <span>Expert Cleaning</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600 text-base 2xl:text-xl leading-relaxed pb-4 2xl:pb-6 pl-12 2xl:pl-14">
+                    Our trained specialists will thoroughly clean your carpets and upholstery using safe, eco-friendly products for you and your loved ones. The result – freshness and cleanliness you can be proud of!
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="step-5" className="border border-gray-200 rounded-lg px-4 2xl:px-6">
+                  <AccordionTrigger className="text-xl 2xl:text-2xl font-semibold text-gray-900 hover:text-green-600 py-4 2xl:py-6">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-8 h-8 2xl:w-10 2xl:h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold text-lg 2xl:text-xl">5</span>
+                      </div>
+                      <span>Enjoy the Clean and Comfort</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-gray-600 text-base 2xl:text-xl leading-relaxed pb-4 2xl:pb-6 pl-12 2xl:pl-14">
+                    Feel the difference! Your home will once again be cozy, clean, and safe for your health, and we guarantee you'll be satisfied.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+
+              <Link href="/booking">
+                <Button className="bg-green-500 hover:bg-green-600 text-white px-8 2xl:px-12 py-3 2xl:py-6 text-lg 2xl:text-xl font-semibold">
+                  SCHEDULE SERVICE
+                </Button>
+              </Link>
+            </div>
+
+            {/* Right Image */}
+            <div className="relative">
+              <img
+                src="/images/professional-cleaner.webp"
+                alt="Professional cleaner demonstrating the cleaning process"
+                className="w-full h-[600px] 2xl:h-[800px] object-cover rounded-lg shadow-lg"
+              />
             </div>
           </div>
         </div>

@@ -54,12 +54,12 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
       {href ? (
         <a
           href={href}
-          className="font-bold text-gray-800 2xl:text-2xl hover:text-blue-500 transition-colors whitespace-nowrap"
+          className="font-bold text-gray-800 2xl:text-2xl hover:text-blue-500 transition-colors whitespace-nowrap leading-5"
           dangerouslySetInnerHTML={{ __html: subtitle }}
         />
       ) : (
         <p
-          className="font-bold text-gray-800 2xl:text-2xl whitespace-nowrap"
+          className="font-bold text-gray-800 2xl:text-2xl whitespace-nowrap leading-5"
           dangerouslySetInnerHTML={{ __html: subtitle }}
         />
       )}
@@ -110,7 +110,13 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
     <header className="relative">
       {/* Top Section - White Bar */}
       <div className="bg-white">
-        <div className="w-full mx-auto px-4 hidden lg:block">
+        <div className="w-full mx-auto px-4 hidden lg:block relative">
+
+         <div className="absolute top-[30%] left-[5%]">
+          <img src="./images/flag.png" alt="Flag" className="w-[90px] 2xl:w-[150px]" />
+        </div>
+
+
           <div className="flex items-center h-28 2xl:h-40">
             <div className="flex-1 flex items-center justify-end space-x-6">
               <InfoItem
