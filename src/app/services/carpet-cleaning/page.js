@@ -64,6 +64,24 @@ export default function CarpetCleaningPage() {
         </div>
       </section>
 
+      {/* Action Buttons */}
+      <section className="py-12 px-4 bg-white">
+        <div className="container mx-auto max-w-4xl text-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/booking">
+              <Button className="bg-sky-700 hover:bg-sky-900 text-white px-8 py-3 text-lg font-medium">
+                Book Online
+              </Button>
+            </a>
+            <a href="/portfolio">
+              <Button variant="outline" className="border-sky-700 text-sky-700 hover:bg-sky-50 px-8 py-3 text-lg font-medium">
+                More Photos Here
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Less Water, Faster Dry Time */}
       <section className="py-24 px-4 bg-slate-50">
         <div className="container mx-auto max-w-6xl">
@@ -145,6 +163,11 @@ export default function CarpetCleaningPage() {
             <a href="/booking">
               <Button className="bg-sky-700 hover:bg-sky-900 text-white px-8 py-3 text-lg font-medium">
                 Book Online
+              </Button>
+            </a>
+            <a href="/portfolio">
+              <Button variant="outline" className="border-sky-700 text-sky-700 hover:bg-sky-50 px-8 py-3 text-lg font-medium">
+                More Photos Here
               </Button>
             </a>
           </div>

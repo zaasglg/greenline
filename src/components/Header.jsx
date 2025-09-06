@@ -112,8 +112,8 @@ const InfoItem = ({ icon, title, subtitle, href }) => (
       <div className="bg-white">
         <div className="w-full mx-auto px-4 hidden lg:block relative">
 
-         <div className="absolute top-[30%] left-[5%]">
-          <img src="./images/flag.png" alt="Flag" className="w-[90px] 2xl:w-[150px]" />
+        <div className="absolute top-[30%] left-[5%]">
+          <img src="/images/flag.png" alt="Flag" className="w-[90px] 2xl:w-[150px]" />
         </div>
 
 

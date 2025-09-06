@@ -6,13 +6,13 @@ export default function UpholsteryCleaningPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-24 px-4 bg-gradient-to-r from-slate-800 to-slate-900">
+      <section className="py-24 px-4 bg-gradient-to-b from-sky-300 via-sky-400 to-blue-600">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
             Professional Upholstery Cleaning by GreenLine Cleaning
           </h1>
           <div className="w-24 h-1 bg-emerald-400 mx-auto mb-6"></div>
-          <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
             Your furniture is where you relax and unwind, but over time, without proper cleaning, it loses its freshness and starts to look dull and worn. Isn&apos;t it time to bring your upholstery back to life with GreenLine Cleaning?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -158,6 +158,11 @@ export default function UpholsteryCleaningPage() {
             <Button className="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white px-8 py-3 text-lg font-medium">
               Get Free Quote
             </Button>
+            <a href="/portfolio">
+              <Button variant="outline" className="border-sky-700 text-sky-700 hover:bg-sky-50 px-8 py-3 text-lg font-medium">
+                More Photos Here
+              </Button>
+            </a>
           </div>
         </div>
       </section>

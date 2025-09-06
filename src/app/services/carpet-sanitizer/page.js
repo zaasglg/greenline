@@ -6,14 +6,18 @@ export default function CarpetSanitizerPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-24 px-4 bg-gradient-to-r from-slate-800 to-slate-900">
+      <section className="py-24 px-4 bg-gradient-to-b from-sky-300 via-sky-400 to-blue-600">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
             Carpet Sanitizer — Keep Your Carpets Fresh and Clean
           </h1>
           <div className="w-24 h-1 bg-emerald-400 mx-auto mb-6"></div>
-          <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed mb-8">
-            Home is your sanctuary — a place to leave the world&apos;s worries behind. GreenLine Cleaning&apos;s carpet sanitizer is designed to help with that. This EPA-registered product effectively kills odor-causing bacteria trapped in carpets and upholstery.
+          <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
+            Home is your sanctuary — a place to leave the world&apos;s worries behind. GreenLine Cleaning&apos;s carpet sanitizer is designed to help with that. This EPA-registered product effectively kills odor-causing bacteria trapped in carpets and upholstery. In fact, it&apos;s one of the few products approved for use on soft surfaces.
+            <br /><br />
+            By eliminating these bacteria, we remove stubborn odors that can be impossible to get rid of. If your carpets have been struggling with a lingering smell, it&apos;s time to try GreenLine Cleaning&apos;s carpet sanitizer.
+            <br /><br />
+            Call our Scheduling Center today to book your carpet sanitizing service.
           </p>
         </div>
       </section>
@@ -67,6 +71,24 @@ export default function CarpetSanitizerPage() {
         </div>
       </section>
 
+      {/* Action Buttons */}
+      <section className="py-12 px-4 bg-white">
+        <div className="container mx-auto max-w-4xl text-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/booking">
+              <Button className="bg-sky-700 hover:bg-sky-900 text-white px-8 py-3 text-lg font-medium">
+                Book Online
+              </Button>
+            </a>
+            <a href="/portfolio">
+              <Button variant="outline" className="border-sky-700 text-sky-700 hover:bg-sky-50 px-8 py-3 text-lg font-medium">
+                More Photos Here
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Why Clean and Sanitize */}
       <section className="py-24 px-4 bg-slate-50">
         <div className="container mx-auto max-w-6xl">
@@ -88,134 +110,6 @@ export default function CarpetSanitizerPage() {
             <p className="text-slate-600 mb-6">
               Our oxygen-powered carpet cleaning effectively breaks down tough dirt and stains.
             </p>
-          </div>
-
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Here&apos;s how we do it:</h3>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            <div className="bg-white p-6 rounded border-l-2 border-slate-400 text-center">
-              <div className="w-12 h-12 bg-slate-50 rounded flex items-center justify-center mx-auto mb-4">
-                <span className="text-xl font-bold text-emerald-600">1</span>
-              </div>
-              <h3 className="text-lg font-medium text-slate-900 mb-2">Inspection & Pretreat</h3>
-              <p className="text-slate-600 text-sm">
-                After a careful inspection, we pretreat heavily soiled spots with a special enzyme-based cleaner that quickly and safely breaks down grease and grime.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded border-l-2 border-slate-400 text-center">
-              <div className="w-12 h-12 bg-slate-50 rounded flex items-center justify-center mx-auto mb-4">
-                <span className="text-xl font-bold text-emerald-600">2</span>
-              </div>
-              <h3 className="text-lg font-medium text-slate-900 mb-2">Main Solution</h3>
-              <p className="text-slate-600 text-sm">
-                We apply our main solution — a blend of oxygenated booster and encapsulator — which breaks apart dirt and traps it in tiny crystals.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded border-l-2 border-slate-400 text-center">
-              <div className="w-12 h-12 bg-slate-50 rounded flex items-center justify-center mx-auto mb-4">
-                <span className="text-xl font-bold text-emerald-600">3</span>
-              </div>
-              <h3 className="text-lg font-medium text-slate-900 mb-2">Gentle Extraction</h3>
-              <p className="text-slate-600 text-sm">
-                Using advanced equipment, we gently lift debris out of the carpet fibers without crushing the pile.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded border-l-2 border-slate-400 text-center">
-              <div className="w-12 h-12 bg-slate-50 rounded flex items-center justify-center mx-auto mb-4">
-                <span className="text-xl font-bold text-emerald-600">4</span>
-              </div>
-              <h3 className="text-lg font-medium text-slate-900 mb-2">Final Touch</h3>
-              <p className="text-slate-600 text-sm">
-                Finally, we vacuum and groom the carpets to leave them looking professionally cleaned and refreshed.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-emerald-50 p-6 rounded text-center border border-emerald-200">
-            <h3 className="text-xl font-bold text-slate-900 mb-4">
-              Complete Restoration
-            </h3>
-            <p className="text-slate-600 mb-4">
-              This process restores your floors and brings back their fresh appearance!
-            </p>
-            <p className="text-slate-600">
-              If odor-causing bacteria are an issue, we add our sanitizer treatment to fully eliminate them and leave your carpets smelling fresh and clean.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Upholstery Sanitizing */}
-      <section className="py-24 px-4 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative order-2 lg:order-1">
-              <div className="aspect-[4/5] rounded-2xl relative overflow-hidden shadow-lg">
-                <img
-                  src="/images/rest_4.JPG"
-                  alt="Professional carpet and upholstery sanitizing equipment"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-            <div className="order-1 lg:order-2">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Upholstery Cleaning and Sanitizing
-              </h2>
-              <div className="w-16 h-1 bg-emerald-600 mb-6"></div>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                We don&apos;t stop at carpets — we also sanitize your upholstered furniture.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                If your sofa or chair has developed stubborn odors, we can remove dirt and bacteria causing the smell, restoring freshness and comfort.
-              </p>
-
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-emerald-600 flex-shrink-0" />
-                  <span className="text-slate-700 font-medium">Furniture sanitizing</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Zap className="w-6 h-6 text-emerald-600 flex-shrink-0" />
-                  <span className="text-slate-700 font-medium">Odor elimination</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Sparkles className="w-6 h-6 text-emerald-600 flex-shrink-0" />
-                  <span className="text-slate-700 font-medium">Restored freshness</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-24 px-4 bg-slate-50">
-        <div className="container mx-auto max-w-4xl text-center">
-          <Phone className="w-16 h-16 text-emerald-600 mx-auto mb-4" />
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Ready for Fresh, Clean Carpets?
-          </h2>
-          <div className="w-16 h-1 bg-emerald-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 mb-4">
-            Call our Scheduling Center today to book your carpet sanitizing service.
-          </p>
-          <p className="text-lg text-emerald-600 font-semibold mb-8">
-            Schedule your carpet cleaning and sanitizing with GreenLine Cleaning today!
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/booking">
-              <Button className="bg-sky-700 hover:bg-sky-900 text-white px-8 py-3 text-lg font-medium">
-                Book Online
-              </Button>
-            </a>
           </div>
         </div>
       </section>

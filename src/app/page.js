@@ -251,7 +251,7 @@ export default function Home() {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="w-56 2xl:w-[450px] shadow-2xl rounded-lg"
+            className="w-56 2xl:w-[450px] h-68 2xl:h-[500px] shadow-2xl rounded-lg"
           ></iframe>
 
           <div className="mt-7 text-center">
@@ -259,7 +259,7 @@ export default function Home() {
               href="https://www.google.com/maps/place/Green+Line+Carpet+Cleaning/@39.6927189,-104.8741227,17z/data=!3m1!4b1!4m6!3m5!1s0x44055d02d7065a9b:0xf71240a02f337470!8m2!3d39.6927189!4d-104.8741227!16s%2Fg%2F11lnfk3hhw?entry=ttu&g_ep=EgoyMDI1MDgzMC4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-4 2xl:px-12 2xl:py-6 rounded-lg font-semibold text-xl 2xl:text-2xl transition-colors duration-300 shadow-lg hover:shadow-xl"
+              className="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-4 2xl:px-12 2xl:py-6 rounded-lg font-semibold lg:text-base 2xl:text-2xl transition-colors duration-300 shadow-lg hover:shadow-xl"
             >
               Google Maps Reviews
             </a>

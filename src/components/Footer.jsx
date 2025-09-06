@@ -57,6 +57,11 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link href="/privacy-policy" className="text-white 2xl:text-3xl hover:text-gray-200 transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -151,14 +156,8 @@ export default function Footer() {
               © 2024 GreenLine Cleaning Services. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm 2xl:text-xl">
-              <Link href="/privacy" className="text-white 2xl:text-2xl hover:text-gray-200 transition-colors">
+              <Link href="/privacy-policy" className="text-white 2xl:text-2xl hover:text-gray-200 transition-colors">
                 Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-white 2xl:text-2xl hover:text-gray-200 transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/sitemap" className="text-white 2xl:text-2xl hover:text-gray-200 transition-colors">
-                Sitemap
               </Link>
             </div>
           </div>

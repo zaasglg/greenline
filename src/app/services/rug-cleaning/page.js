@@ -6,13 +6,13 @@ export default function RugCleaningPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-24 px-4 bg-gradient-to-r from-slate-800 to-slate-900">
+      <section className="py-24 px-4 bg-gradient-to-b from-sky-300 via-sky-400 to-blue-600">
         <div className="container mx-auto text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
             Rug Cleaning
           </h1>
           <div className="w-24 h-1 bg-emerald-400 mx-auto mb-6"></div>
-          <p className="text-xl text-slate-200 max-w-3xl mx-auto leading-relaxed mb-8">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-8">
             Area rugs do more than just decorate your home — they protect the floors underneath and add warmth to any room. Because they handle a lot of foot traffic and daily wear, they need regular cleaning to stay fresh. Without proper care, rugs start to look dingy and worn out.
           </p>
         </div>
@@ -74,6 +74,24 @@ export default function RugCleaningPage() {
         </div>
       </section>
 
+      {/* Action Buttons */}
+      <section className="py-12 px-4 bg-white">
+        <div className="container mx-auto max-w-4xl text-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/booking">
+              <Button className="bg-sky-700 hover:bg-sky-900 text-white px-8 py-3 text-lg font-medium">
+                Book Online
+              </Button>
+            </a>
+            <a href="/portfolio">
+              <Button variant="outline" className="border-sky-700 text-sky-700 hover:bg-sky-50 px-8 py-3 text-lg font-medium">
+                More Photos Here
+              </Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Why choose us? */}
       <section className="py-24 px-4 bg-slate-50">
         <div className="container mx-auto max-w-6xl">
@@ -113,12 +131,6 @@ export default function RugCleaningPage() {
               </p>
             </div>
           </div>
-
-              <a href="/booking">
-                <Button className="bg-sky-700 hover:bg-sky-900 text-white px-8 py-3 text-lg font-medium">
-                  Book Online
-                </Button>
-              </a>
         </div>
       </section>
     </div>
